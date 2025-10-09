@@ -1,0 +1,4037 @@
+Directory structure:
+└── promptadvisers-agentic-design-patterns-docs/
+    ├── README.md
+    ├── ascii-art/
+    │   ├── all-patterns-overview.txt
+    │   ├── evaluation-and-monitoring.txt
+    │   ├── exception-handling-and-recovery.txt
+    │   ├── exploration-and-discovery.txt
+    │   ├── goal-setting-and-monitoring.txt
+    │   ├── guardrails-safety-patterns.txt
+    │   ├── human-in-the-loop.txt
+    │   ├── inter-agent-communication-a2a.txt
+    │   ├── knowledge-retrieval-rag.txt
+    │   ├── learning-and-adaptation.txt
+    │   ├── memory-management.txt
+    │   ├── model-context-protocol.txt
+    │   ├── multi-agent-collaboration.txt
+    │   ├── parallelization.txt
+    │   ├── planning.txt
+    │   ├── prioritization.txt
+    │   ├── prompt-chaining.txt
+    │   ├── reasoning-techniques.txt
+    │   ├── reflection.txt
+    │   ├── resource-aware-optimization.txt
+    │   ├── routing.txt
+    │   └── tool-use.txt
+    ├── mermaid-diagrams/
+    │   ├── evaluation-and-monitoring.mmd
+    │   ├── exception-handling-and-recovery.mmd
+    │   ├── exploration-and-discovery.mmd
+    │   ├── goal-setting-and-monitoring.mmd
+    │   ├── guardrails-safety-patterns.mmd
+    │   ├── human-in-the-loop.mmd
+    │   ├── inter-agent-communication-a2a.mmd
+    │   ├── knowledge-retrieval-rag.mmd
+    │   ├── learning-and-adaptation.mmd
+    │   ├── memory-management.mmd
+    │   ├── model-context-protocol.mmd
+    │   ├── multi-agent-collaboration.mmd
+    │   ├── parallelization.mmd
+    │   ├── planning.mmd
+    │   ├── prioritization.mmd
+    │   ├── prompt-chaining.mmd
+    │   ├── reasoning-techniques.mmd
+    │   ├── reflection.mmd
+    │   ├── resource-aware-optimization.mmd
+    │   ├── routing.mmd
+    │   └── tool-use.mmd
+    └── pattern-discussion/
+        ├── evaluation-and-monitoring.md
+        ├── exception-handling-and-recovery.md
+        ├── exploration-and-discovery.md
+        ├── goal-setting-and-monitoring.md
+        ├── guardrails-safety-patterns.md
+        ├── human-in-the-loop.md
+        ├── inter-agent-communication-a2a.md
+        ├── knowledge-retrieval-rag.md
+        ├── learning-and-adaptation.md
+        ├── memory-management.md
+        ├── model-context-protocol.md
+        ├── multi-agent-collaboration.md
+        ├── parallelization.md
+        ├── planning.md
+        ├── prioritization.md
+        ├── prompt-chaining.md
+        ├── reasoning-techniques.md
+        ├── reflection.md
+        ├── resource-aware-optimization.md
+        ├── routing.md
+        └── tool-use.md
+
+================================================
+FILE: README.md
+================================================
+# Agentic Design Patterns Documentation
+
+A comprehensive visual and textual documentation of 21 essential agentic design patterns for building intelligent AI systems.
+
+## 📚 What's Included
+
+This repository contains three main types of documentation for each pattern:
+
+### 🔷 Mermaid Diagrams (`/mermaid-diagrams`)
+Visual flowcharts in plain English showing how each pattern works, designed to be easily understood without technical jargon.
+
+### 💬 Pattern Discussions (`/pattern-discussion`)
+Detailed explanations covering:
+- When to use each pattern
+- Where it fits in your architecture
+- Pros and cons
+- Implementation considerations
+
+### 🎨 ASCII Art Diagrams (`/ascii-art`)
+Text-based diagrams perfect for copying into Miro boards, documentation, or anywhere that doesn't support rich graphics.
+
+## 🎯 The 21 Patterns
+
+### Core Patterns
+1. **Prompt Chaining** - Breaking complex tasks into sequential steps
+2. **Routing** - Directing requests to the right handler
+3. **Parallelization** - Running multiple tasks simultaneously
+4. **Reflection** - Self-evaluation and improvement
+5. **Tool Use** - Integrating external capabilities
+
+### Advanced Patterns
+6. **Planning** - Strategic task decomposition
+7. **Multi-Agent Collaboration** - Coordinating multiple agents
+8. **Memory Management** - Storing and retrieving context
+9. **Learning and Adaptation** - Improving over time
+10. **Model Context Protocol** - Standardized agent communication
+
+### System Patterns
+11. **Goal Setting and Monitoring** - Tracking objectives
+12. **Exception Handling and Recovery** - Graceful error management
+13. **Human-in-the-Loop** - Incorporating human feedback
+14. **Knowledge Retrieval (RAG)** - Accessing external knowledge
+15. **Inter-Agent Communication** - Agent-to-agent messaging
+
+### Optimization Patterns
+16. **Resource-Aware Optimization** - Efficient resource usage
+17. **Reasoning Techniques** - Structured thinking approaches
+18. **Guardrails/Safety Patterns** - Ensuring safe operations
+19. **Evaluation and Monitoring** - Performance tracking
+
+### Strategic Patterns
+20. **Prioritization** - Managing task importance
+21. **Exploration and Discovery** - Finding new solutions
+
+## 🚀 Quick Start
+
+Each pattern includes:
+- A visual diagram showing the flow
+- Plain English explanations
+- Real-world use cases
+- Implementation tips
+
+Navigate to any folder to explore the patterns in your preferred format.
+
+## 📖 Source
+
+These patterns are distilled from extensive research on agentic AI systems, made accessible through simple visual representations and clear explanations.
+
+## 🤝 Contributing
+
+Feel free to suggest improvements or additional patterns through issues or pull requests.
+
+## 📄 License
+
+MIT License - Use these patterns freely in your projects!
+
+
+================================================
+FILE: ascii-art/all-patterns-overview.txt
+================================================
+╔══════════════════════════════════════════════════════════════════╗
+║              21 AGENTIC DESIGN PATTERNS - OVERVIEW               ║
+╚══════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────┐
+│                        CORE PATTERNS                             │
+├─────────────────────────────────────────────────────────────────┤
+│ 1. PROMPT CHAINING:    Task1 → Task2 → Task3 → Merge           │
+│ 2. ROUTING:            Request → Router → Specialized Agent     │
+│ 3. PARALLELIZATION:    Split → [W1|W2|W3|W4] → Merge           │
+│ 4. REFLECTION:         Generate → Critique → Revise → Final     │
+│ 5. TOOL USE:           Agent → Select Tool → Call → Process     │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│                      ADVANCED PATTERNS                           │
+├─────────────────────────────────────────────────────────────────┤
+│ 6. PLANNING:           Goal → Milestones → Execute → Monitor    │
+│ 7. MULTI-AGENT:        Coordinator → [A1|A2|A3|A4] → Output    │
+│ 8. MEMORY:             Input → Classify → Store → Retrieve      │
+│ 9. LEARNING:           Feedback → Learn → Test → Deploy         │
+│ 10. MCP:               Registry → Discover → Authorize → Call   │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│                       SYSTEM PATTERNS                            │
+├─────────────────────────────────────────────────────────────────┤
+│ 11. GOAL SETTING:      SMART → KPIs → Monitor → Achieve        │
+│ 12. EXCEPTION:         Try → Error → Classify → Recover        │
+│ 13. HUMAN-IN-LOOP:     AI → Decision Gate → Human → Learn      │
+│ 14. RAG:               Index → Query → Retrieve → Generate     │
+│ 15. A2A COMM:          Agent → Message Broker → Agent          │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│                    OPTIMIZATION PATTERNS                         │
+├─────────────────────────────────────────────────────────────────┤
+│ 16. RESOURCE-AWARE:    Classify → Route Model → Monitor        │
+│ 17. REASONING:         Problem → Method (CoT/ToT/SC) → Solve   │
+│ 18. GUARDRAILS:        Input → Sanitize → Risk → Moderate      │
+│ 19. EVALUATION:        Tests → Monitor → Detect → Optimize     │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│                     STRATEGIC PATTERNS                           │
+├─────────────────────────────────────────────────────────────────┤
+│ 20. PRIORITIZATION:    Score Tasks → Rank → Execute → Reorder  │
+│ 21. EXPLORATION:       Scout → Cluster → Deep Dive → Discover  │
+└─────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+ For Miro Board: Each pattern has its own detailed ASCII diagram
+ Files: ascii-art/[pattern-name].txt
+═══════════════════════════════════════════════════════════════════
+
+
+================================================
+FILE: ascii-art/evaluation-and-monitoring.txt
+================================================
+╔══════════════════════════════════════════════════╗
+║        EVALUATION & MONITORING                    ║
+╚══════════════════════════════════════════════════╝
+
+    ┌──────────────┐
+    │ GOLDEN TESTS │
+    └──────────────┘
+           ↓
+    ┌──────────────┐
+    │   QUALITY    │
+    │    GATES     │
+    └──────────────┘
+           ↓
+     [PRODUCTION]
+           ↓
+    ╔═══════════╗
+    ║  METRICS  ║
+    ╠═══════════╣
+    ║ • Accuracy║
+    ║ • Latency ║
+    ║ • Cost    ║
+    ║ • Drift   ║
+    ╚═══════════╝
+           ↓
+    📊 Dashboard
+           ↓
+    ┌──────────┐
+    │  DETECT  │
+    │ ANOMALY  │
+    └──────────┘
+        ↙   ↘
+    Normal  Alert!
+       ↓      ↓
+    Continue  ↓
+       ↓   Rollback
+       ↓      ↓
+    [OPTIMIZE]
+
+KEY CONCEPTS:
+• Quality gates
+• Real-time metrics
+• Drift detection
+• Automated rollback
+
+
+================================================
+FILE: ascii-art/exception-handling-and-recovery.txt
+================================================
+╔══════════════════════════════════════════════════╗
+║      EXCEPTION HANDLING & RECOVERY                ║
+╚══════════════════════════════════════════════════╝
+
+        [TRY BLOCK]
+            ↓
+        External Call
+            ↓
+         ERROR!
+            ↓
+    ┌──────────────┐
+    │   CLASSIFY   │
+    │    ERROR     │
+    └──────────────┘
+      ↙    ↓     ↘
+  Transient Permanent Critical
+      ↓      ↓        ↓
+   RETRY  FALLBACK  ESCALATE
+      ↓      ↓        ↓
+   Backoff  Cache   Human
+   +Jitter  Model   Alert
+      ↓      ↓        ↓
+   ┌──────────────────┐
+   │   CHECKPOINT     │
+   │   Save State     │
+   └──────────────────┘
+           ↓
+    [RECOVER/RESUME]
+           ↓
+       Log & Learn
+
+KEY CONCEPTS:
+• Error classification
+• Retry strategies
+• Fallback options
+• State preservation
+
+
+================================================
+FILE: ascii-art/exploration-and-discovery.txt
+================================================
+╔══════════════════════════════════════════════════╗
+║        EXPLORATION & DISCOVERY                    ║
+╚══════════════════════════════════════════════════╝
+
+      [RESEARCH GOAL]
+            ↓
+    ┌──────────────┐
+    │ SCOUT BROAD  │
+    └──────────────┘
+      ↙   ↓   ↓   ↘
+   Papers Data Web Experts
+      ↓    ↓   ↓    ↓
+    ┌──────────────┐
+    │ MAP SPACE    │
+    └──────────────┘
+           ↓
+    ┌──────────────┐
+    │   CLUSTER    │
+    │   THEMES     │
+    └──────────────┘
+        ↙  ↓  ↘
+      T1  T2  T3
+        ↓  ↓  ↓
+    ┌──────────────┐
+    │ DEEP DIVE    │← Novel/Impact
+    └──────────────┘
+           ↓
+    Extract Insights
+           ↓
+    ? Hypotheses ?
+           ↓
+    Test & Iterate
+           ↓
+    [DISCOVERIES]
+
+KEY CONCEPTS:
+• Broad exploration
+• Pattern clustering
+• Targeted deep-dives
+• Hypothesis generation
+
+
+================================================
+FILE: ascii-art/goal-setting-and-monitoring.txt
+================================================
+╔══════════════════════════════════════════════════╗
+║       GOAL SETTING & MONITORING                   ║
+╚══════════════════════════════════════════════════╝
+
+       [OBJECTIVE]
+           ↓
+    ┌─────────────┐
+    │   S.M.A.R.T  │
+    │    GOALS     │
+    └─────────────┘
+           ↓
+    ┌─────────────┐
+    │ KPIs & SLAs │
+    └─────────────┘
+           ↓
+      [EXECUTE]
+           ↓
+    ╔═══════════╗
+    ║  MONITOR  ║ ← Real-time
+    ╚═══════════╝
+         ↙ ↓ ↘
+     📊  📈  🚨
+    Metrics Status Alerts
+         ↓
+    ┌─────────────┐
+    │   COMPARE   │
+    │  TO TARGET  │
+    └─────────────┘
+       ↙     ↘
+    On-Track  Drift
+       ↓       ↓
+    Continue  Mitigate
+       ↓       ↓
+    [GOAL ACHIEVED]
+
+KEY CONCEPTS:
+• SMART objectives
+• Continuous monitoring
+• Drift detection
+• Adaptive mitigation
+
+
+================================================
+FILE: ascii-art/guardrails-safety-patterns.txt
+================================================
+[Binary file]
+
+
+================================================
+FILE: ascii-art/human-in-the-loop.txt
+================================================
+╔══════════════════════════════════════════════════╗
+║         HUMAN-IN-THE-LOOP (HITL)                  ║
+╚══════════════════════════════════════════════════╝
+
+       [AI PROCESS]
+           ↓
+    ┌──────────────┐
+    │  DECISION    │
+    │   GATES      │
+    └──────────────┘
+      ↙    ↓    ↘
+   High   Edge  Complex
+   Risk   Case   Task
+     ↓     ↓      ↓
+    ┌──────────────┐
+    │ REVIEW QUEUE │← Priority/SLA
+    └──────────────┘
+           ↓
+    ╔═══════════╗
+    ║   HUMAN   ║
+    ║   REVIEW  ║
+    ╚═══════════╝
+      ↙   ↓   ↘
+  Approve Edit Reject
+     ↓    ↓    ↓
+    ┌──────────────┐
+    │   CAPTURE    │
+    │   FEEDBACK   │
+    └──────────────┘
+           ↓
+    [LEARN & IMPROVE]
+
+KEY CONCEPTS:
+• Decision gates
+• Review queues
+• Human feedback
+• Continuous learning
+
+
+================================================
+FILE: ascii-art/inter-agent-communication-a2a.txt
+================================================
+[Binary file]
+
+
+================================================
+FILE: ascii-art/knowledge-retrieval-rag.txt
+================================================
+[Binary file]
+
+
+================================================
+FILE: ascii-art/learning-and-adaptation.txt
+================================================
+╔══════════════════════════════════════════════════╗
+║        LEARNING & ADAPTATION PATTERN              ║
+╚══════════════════════════════════════════════════╝
+
+    [FEEDBACK SIGNALS]
+      ↙    ↓    ↘
+   Edits Ratings Outcomes
+      ↓    ↓     ↓
+   ┌──────────────┐
+   │  AGGREGATE   │
+   │   & CLEAN    │
+   └──────────────┘
+          ↓
+     Filter Noise
+          ↓
+   ┌──────────────┐
+   │   LEARNING   │
+   │   METHODS    │
+   └──────────────┘
+     ↙    ↓    ↘
+  Prompts Policy Examples
+     ↓     ↓      ↓
+   ┌──────────────┐
+   │   A/B TEST   │
+   └──────────────┘
+        ↙   ↘
+    Better? Worse?
+      ↓      ↓
+   Deploy  Rollback
+      ↓
+  [IMPROVED SYSTEM]
+
+KEY CONCEPTS:
+• Feedback collection
+• Signal validation
+• Multiple learning paths
+• Performance monitoring
+
+
+================================================
+FILE: ascii-art/memory-management.txt
+================================================
+╔══════════════════════════════════════════════════╗
+║          MEMORY MANAGEMENT PATTERN                ║
+╚══════════════════════════════════════════════════╝
+
+         [INPUT]
+           ↓
+    ┌──────────────┐
+    │   CLASSIFY   │
+    └──────────────┘
+      ↙    ↓    ↘
+   Short  Episodic Long
+   Term   Memory   Term
+    ↓       ↓       ↓
+  Buffer  Events  Knowledge
+    ↓       ↓       ↓
+  ┌──────────────────┐
+  │  INDEX + META    │
+  │ • Recency        │
+  │ • Frequency      │
+  │ • Topic Tags     │
+  └──────────────────┘
+           ↓
+    ┌──────────────┐
+    │   RETRIEVE   │←── Current Context
+    └──────────────┘
+           ↓
+       TTL Check
+      ↙        ↘
+   Forget    Load
+             ↓
+        [USE IN CONTEXT]
+
+KEY CONCEPTS:
+• Memory types
+• Context compression
+• Selective retrieval
+• Privacy & TTL
+
+
+================================================
+FILE: ascii-art/model-context-protocol.txt
+================================================
+[Binary file]
+
+
+================================================
+FILE: ascii-art/multi-agent-collaboration.txt
+================================================
+╔══════════════════════════════════════════════════╗
+║       MULTI-AGENT COLLABORATION                   ║
+╚══════════════════════════════════════════════════╝
+
+      ┌─────────────┐
+      │ COORDINATOR │
+      └─────────────┘
+            ↓
+    ┌───────────────────┐
+    │  SHARED MEMORY    │
+    │  & ARTIFACTS      │
+    └───────────────────┘
+      ↙    ↓    ↓    ↘
+   [A1]  [A2]  [A3]  [A4]
+Research Analysis Writer Review
+    ↓      ↓     ↓     ↓
+   Data → Process → Content → QA
+    ↓      ↓     ↓     ↓
+    └──────┴─────┴─────┘
+            ↓
+     Handoff Contracts
+            ↓
+      [FINAL OUTPUT]
+
+KEY CONCEPTS:
+• Specialist roles
+• Shared context
+• Handoff protocols
+• Orchestration patterns
+
+
+================================================
+FILE: ascii-art/parallelization.txt
+================================================
+[Binary file]
+
+
+================================================
+FILE: ascii-art/planning.txt
+================================================
+╔══════════════════════════════════════════════════╗
+║             PLANNING PATTERN                      ║
+╚══════════════════════════════════════════════════╝
+
+         [GOAL]
+           ↓
+    ┌──────────────┐
+    │  Decompose   │
+    │  Milestones  │
+    └──────────────┘
+           ↓
+    ┌──────────────┐
+    │ Dependency   │
+    │    Graph     │
+    └──────────────┘
+         A → B
+         ↓   ↓
+         C → D → E
+           ↓
+    ┌──────────────┐
+    │  Allocate    │←── Constraints
+    │  Resources   │    (time/budget)
+    └──────────────┘
+           ↓
+    [Execute Steps]
+         ↓ ↑
+    ◆ Checkpoint ◆ ← Monitor & Replan
+         ↓
+    [GOAL MET]
+
+KEY CONCEPTS:
+• Milestone mapping
+• Dependency tracking
+• Resource allocation
+• Adaptive replanning
+
+
+================================================
+FILE: ascii-art/prioritization.txt
+================================================
+[Binary file]
+
+
+================================================
+FILE: ascii-art/prompt-chaining.txt
+================================================
+╔══════════════════════════════════════════════════╗
+║           PROMPT CHAINING PATTERN                 ║
+╚══════════════════════════════════════════════════╝
+
+    [INPUT] 
+       ↓
+    ┌──────────┐
+    │  TASK 1  │ → JSON Schema
+    └──────────┘
+       ↓ validate
+    ┌──────────┐
+    │  TASK 2  │ → JSON Schema
+    └──────────┘
+       ↓ validate
+    ┌──────────┐
+    │  TASK 3  │ → JSON Schema
+    └──────────┘
+       ↓ validate
+    ┌──────────┐
+    │  MERGE   │
+    │ RESULTS  │
+    └──────────┘
+       ↓
+    [OUTPUT]
+
+KEY CONCEPTS:
+• Sequential execution
+• Validated handoffs
+• Modular sub-tasks
+• Structured data contracts
+
+
+================================================
+FILE: ascii-art/reasoning-techniques.txt
+================================================
+╔══════════════════════════════════════════════════╗
+║          REASONING TECHNIQUES                     ║
+╚══════════════════════════════════════════════════╝
+
+       [PROBLEM]
+          ↓
+    ┌──────────┐
+    │  SELECT  │
+    │  METHOD  │
+    └──────────┘
+    ↙   ↓   ↓   ↘
+  CoT  ToT  SC  ReAct
+   ↓    ↓   ↓    ↓
+Step  Tree Multi Think
+by    of   Path  +Act
+Step  Ideas Check Loop
+   ↓    ↓    ↓    ↓
+   └────┴────┴────┘
+          ↓
+    ┌──────────┐
+    │  SCORE   │← Rubrics
+    │ SOLUTIONS│
+    └──────────┘
+          ↓
+    Best or Merge
+          ↓
+    [SOLUTION]
+
+METHODS:
+• CoT: Chain of Thought
+• ToT: Tree of Thoughts  
+• SC: Self-Consistency
+• ReAct: Reason + Act
+
+
+================================================
+FILE: ascii-art/reflection.txt
+================================================
+╔══════════════════════════════════════════════════╗
+║            REFLECTION PATTERN                     ║
+╚══════════════════════════════════════════════════╝
+
+       [GENERATE v1]
+            ↓
+       ┌─────────┐
+       │ CRITIC  │←── Rubrics
+       │  AGENT  │    Tests
+       └─────────┘    Checks
+            ↓
+        PASS? NO
+            ↓
+       ┌─────────┐
+       │FEEDBACK │
+       └─────────┘
+            ↓
+       ┌─────────┐
+       │ REVISE  │→ [GENERATE v2]
+       └─────────┘        ↓
+            ↑         PASS? NO
+            └─────────────┘
+         (Max 3 iterations)
+                ↓
+           PASS? YES
+                ↓
+          [FINAL OUTPUT]
+
+KEY CONCEPTS:
+• Self-critique
+• Iterative improvement
+• Quality rubrics
+• Convergence limits
+
+
+================================================
+FILE: ascii-art/resource-aware-optimization.txt
+================================================
+╔══════════════════════════════════════════════════╗
+║       RESOURCE-AWARE OPTIMIZATION                 ║
+╚══════════════════════════════════════════════════╝
+
+        [TASK]
+          ↓
+    ┌──────────┐
+    │ CLASSIFY │
+    │COMPLEXITY│
+    └──────────┘
+      ↙   ↓   ↘
+   Simple Med Complex
+     $    $$   $$$
+     ↓    ↓     ↓
+   Mini  Base  Large
+   Model Model Model
+     ↓    ↓     ↓
+    ┌──────────┐
+    │ MONITOR  │
+    │ RESOURCES│
+    └──────────┘
+         ↓
+    ┌──────────┐
+    │ Tokens   │ ← Limits
+    │ Time     │
+    │ Cost     │
+    └──────────┘
+       ↓   ↓
+     OK? Exceed?
+      ↓    ↓
+   Continue ↓
+      ↓  Optimize
+      ↓  (cache/prune)
+      ↓    ↓
+    [COMPLETE]
+
+KEY CONCEPTS:
+• Complexity routing
+• Model selection
+• Budget tracking
+• Dynamic optimization
+
+
+================================================
+FILE: ascii-art/routing.txt
+================================================
+╔══════════════════════════════════════════════════╗
+║              ROUTING PATTERN                      ║
+╚══════════════════════════════════════════════════╝
+
+            [REQUEST]
+                ↓
+         ╔═══════════╗
+         ║  ROUTER   ║
+         ║  AGENT    ║
+         ╚═══════════╝
+         ↙   ↓   ↓   ↘
+      70%   85%  60%  40%
+       ↓     ↓    ↓    ↓
+    [Tech] [Sales] [Support] [?]
+       ↓     ↓       ↓       ↓
+    Tools  CRM    Tickets  Clarify
+       ↓     ↓       ↓       ↓
+       └─────┴───────┴───────┘
+                 ↓
+           [RESPONSE]
+
+KEY CONCEPTS:
+• Intent classification
+• Confidence thresholds  
+• Specialized agents
+• Fallback handling
+
+
+================================================
+FILE: ascii-art/tool-use.txt
+================================================
+╔══════════════════════════════════════════════════╗
+║            TOOL USE PATTERN                       ║
+╚══════════════════════════════════════════════════╝
+
+        [LLM AGENT]
+            ↓
+     "Need external data"
+            ↓
+      ╔═══════════╗
+      ║   TOOL    ║
+      ║ REGISTRY  ║
+      ╚═══════════╝
+      ↙     ↓     ↘
+   🔍Web  📊Data  🔧API
+     ↓      ↓      ↓
+   ┌────────────────┐
+   │ Select & Call  │
+   │ with params    │
+   └────────────────┘
+           ↓
+      {JSON Response}
+           ↓
+      ┌─────────┐
+      │ Parse & │
+      │Normalize│
+      └─────────┘
+           ↓
+      [CONTINUE]
+
+KEY CONCEPTS:
+• Function calling
+• Tool discovery
+• Error handling
+• Result integration
+
+
+================================================
+FILE: mermaid-diagrams/evaluation-and-monitoring.mmd
+================================================
+graph TD
+    Start[System Deployment] --> Define[Define Quality Gates]
+    
+    Define --> Gates{Quality Criteria}
+    
+    Gates --> Accuracy[Accuracy Metrics]
+    Gates --> Performance[Performance SLAs]
+    Gates --> Compliance[Compliance Rules]
+    Gates --> UX[User Experience]
+    
+    Accuracy --> Golden[Golden Test Sets]
+    Performance --> Benchmarks[Performance Benchmarks]
+    Compliance --> Standards[Regulatory Standards]
+    UX --> Satisfaction[Satisfaction Scores]
+    
+    Golden --> Tests[Create Test Suite]
+    Benchmarks --> Tests
+    Standards --> Tests
+    Satisfaction --> Tests
+    
+    Tests --> Unit[Unit Tests]
+    Tests --> Contract[Contract Tests]
+    Tests --> Integration[Integration Tests]
+    Tests --> E2E[End-to-End Tests]
+    
+    Unit --> Critical[Critical Path Tests]
+    Contract --> Critical
+    Integration --> Critical
+    E2E --> Critical
+    
+    Critical --> Instrument[Instrument System]
+    
+    Instrument --> Traces[Distributed Traces]
+    Instrument --> Metrics[System Metrics]
+    Instrument --> Costs[Cost Tracking]
+    Instrument --> Latency[Latency Monitoring]
+    
+    Traces --> Collect[Collect Data]
+    Metrics --> Collect
+    Costs --> Collect
+    Latency --> Collect
+    
+    Collect --> Analyze{Analyze Patterns}
+    
+    Analyze --> Drift[Detect Drift]
+    Analyze --> Regression[Find Regressions]
+    Analyze --> Anomalies[Spot Anomalies]
+    Analyze --> Trends[Identify Trends]
+    
+    Drift --> Alert{Threshold Breach?}
+    Regression --> Alert
+    Anomalies --> Alert
+    Trends --> Alert
+    
+    Alert -->|Yes| Notify[Alert Teams]
+    Alert -->|No| Continue[Continue Monitoring]
+    
+    Notify --> Investigate[Investigate Issue]
+    Investigate --> Decision{Action Required?}
+    
+    Decision -->|Rollback| Revert[Revert Changes]
+    Decision -->|Fix| Patch[Deploy Fix]
+    Decision -->|Accept| Document[Document Decision]
+    
+    Revert --> Verify[Verify Recovery]
+    Patch --> Verify
+    Document --> Continue
+    
+    Continue --> Periodic[Periodic Audits]
+    Verify --> Periodic
+    
+    Periodic --> Review[Review Performance]
+    Review --> Update[Update Eval Sets]
+    
+    Update --> Refresh[Refresh Tests]
+    Refresh --> Improve[Continuous Improvement]
+    
+    Improve --> End[System Monitored]
+
+    style Start fill:#e1f5fe
+    style Gates fill:#fff59d
+    style Analyze fill:#fff9c4
+    style Decision fill:#f3e5f5
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: mermaid-diagrams/exception-handling-and-recovery.mmd
+================================================
+graph TD
+    Start[Try to Do Something] --> Wrap[Add Safety Checks]
+    
+    Wrap --> Call[Make the Call]
+    Call --> External[Call External Service]
+    External --> Tool[Use a Tool]
+    External --> Service[Use a Service]
+    
+    Tool --> Result{Did It Work?}
+    Service --> Result
+    
+    Result -->|Success| Process[Use the Result]
+    Result -->|Error| Catch[Catch the Error]
+    
+    Catch --> WhatKind{What Kind of Error?}
+    
+    WhatKind -->|Temporary| Retry[Try Again]
+    WhatKind -->|Permanent| Backup[Use Backup Plan]
+    WhatKind -->|Critical| Emergency[Emergency Response]
+    
+    Retry --> Wait[Wait a Bit]
+    Wait --> AddTime[Wait Longer Each Time]
+    AddTime --> Count{How Many Tries?}
+    
+    Count -->|Less Than Max| Call
+    Count -->|Too Many| Backup
+    
+    Backup --> Options{Backup Options}
+    
+    Options --> Simple[Use Simpler Method]
+    Options --> Saved[Use Saved Data]
+    Options --> Default[Use Default Answer]
+    Options --> Human[Get Human Help]
+    
+    Simple --> Recover[Start Recovery]
+    Saved --> Recover
+    Default --> Recover
+    Human --> Recover
+    
+    Emergency --> SaveWork[Save Current Work]
+    SaveWork --> Alert[Alert the Team]
+    
+    Alert --> Safety{Is It Safe to Continue?}
+    
+    Safety -->|Over Limit| Stop[Emergency Stop]
+    Safety -->|OK| Resume[Pick Up Where We Left Off]
+    
+    Recover --> Record[Record What Happened]
+    Resume --> Record
+    Stop --> Record
+    
+    Record --> Track[Track Error Patterns]
+    Track --> Learn[Learn From Errors]
+    
+    Learn --> Improve[Improve for Next Time]
+    Process --> Success[Task Completed]
+    Improve --> End[Continue Working]
+    Success --> End
+
+    style Start fill:#e1f5fe
+    style WhatKind fill:#fff59d
+    style Options fill:#fff9c4
+    style Safety fill:#ffccbc
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: mermaid-diagrams/exploration-and-discovery.mmd
+================================================
+graph TD
+    Start[Research Goal] --> Scout[Scout Broadly]
+    
+    Scout --> Sources{Explore Sources}
+    
+    Sources --> Literature[Academic Papers]
+    Sources --> Data[Datasets]
+    Sources --> Experts[Domain Experts]
+    Sources --> Web[Web Resources]
+    Sources --> Experiments[Experimental Data]
+    
+    Literature --> Collect[Collect Information]
+    Data --> Collect
+    Experts --> Collect
+    Web --> Collect
+    Experiments --> Collect
+    
+    Collect --> Map[Map Knowledge Space]
+    Map --> Identify[Identify Key Areas]
+    
+    Identify --> Cluster{Cluster Themes}
+    
+    Cluster --> Theme1[Theme Group 1]
+    Cluster --> Theme2[Theme Group 2]
+    Cluster --> Theme3[Theme Group 3]
+    Cluster --> ThemeN[Theme Group N]
+    
+    Theme1 --> Analyze[Analyze Patterns]
+    Theme2 --> Analyze
+    Theme3 --> Analyze
+    ThemeN --> Analyze
+    
+    Analyze --> Select[Select Deep-Dive Targets]
+    
+    Select --> Criteria{Selection Criteria}
+    
+    Criteria --> Novel[Novelty Score]
+    Criteria --> Impact[Potential Impact]
+    Criteria --> Feasible[Feasibility]
+    Criteria --> Gaps[Knowledge Gaps]
+    
+    Novel --> Pick[Pick Exploration Targets]
+    Impact --> Pick
+    Feasible --> Pick
+    Gaps --> Pick
+    
+    Pick --> DeepDive[Deep Investigation]
+    
+    DeepDive --> Extract{Extract Artifacts}
+    
+    Extract --> Notes[Research Notes]
+    Extract --> Bibliography[Bibliography]
+    Extract --> Datasets[Curated Datasets]
+    Extract --> Contacts[Expert Contacts]
+    Extract --> Models[Conceptual Models]
+    
+    Notes --> Synthesize[Synthesize Insights]
+    Bibliography --> Synthesize
+    Datasets --> Synthesize
+    Contacts --> Synthesize
+    Models --> Synthesize
+    
+    Synthesize --> Insights[Key Insights]
+    Insights --> Questions[Open Questions]
+    Questions --> Hypotheses[Generate Hypotheses]
+    
+    Hypotheses --> Check{Iteration Limit?}
+    
+    Check -->|Not Reached| Design[Design Experiments]
+    Check -->|Reached| Conclude[Conclude Exploration]
+    
+    Design --> Test[Test Hypotheses]
+    Test --> Results[Gather Results]
+    Results --> Scout
+    
+    Conclude --> Report[Generate Report]
+    Report --> Findings[Document Findings]
+    Findings --> NextSteps[Recommend Next Steps]
+    
+    NextSteps --> End[Discovery Complete]
+
+    style Start fill:#e1f5fe
+    style Cluster fill:#fff59d
+    style Criteria fill:#fff9c4
+    style Check fill:#f3e5f5
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: mermaid-diagrams/goal-setting-and-monitoring.mmd
+================================================
+graph TD
+    Start[What Do We Want to Achieve?] --> Create[Create Clear Goals]
+    
+    Create --> Specific[Make It Specific]
+    Create --> Measurable[Make It Measurable]
+    Create --> Achievable[Make It Achievable]
+    Create --> Relevant[Make It Matter]
+    Create --> TimeBound[Set a Deadline]
+    
+    Specific --> Rules[Set the Rules]
+    Measurable --> Rules
+    Achievable --> Rules
+    Relevant --> Rules
+    TimeBound --> Rules
+    
+    Rules --> Budget[How Much Can We Spend?]
+    Rules --> Resources[What Resources Do We Have?]
+    Rules --> Deadline[When Must It Be Done?]
+    
+    Budget --> Targets[Set Success Targets]
+    Resources --> Targets
+    Deadline --> Targets
+    
+    Targets --> Quality[Set Quality Standards]
+    Quality --> Start_Work[Start Working]
+    
+    Start_Work --> Watch{Watch Progress}
+    
+    Watch --> Status[Check Current Status]
+    Watch --> Save[Save Progress Points]
+    Watch --> Track[Track How We're Doing]
+    
+    Status --> Numbers[Collect the Numbers]
+    Save --> Numbers
+    Track --> Numbers
+    
+    Numbers --> Compare{Are We On Track?}
+    
+    Compare -->|Yes| Continue[Keep Going]
+    Compare -->|Getting Off Track| Alert[Sound the Alarm]
+    Compare -->|Blocked| Escalate[Get Help]
+    
+    Alert --> Why[Find Out Why]
+    Escalate --> Why
+    
+    Why --> Fix{How to Fix It?}
+    
+    Fix --> Adjust[Change the Plan]
+    Fix --> More_Resources[Get More Resources]
+    Fix --> Change_Goal[Change the Goal]
+    
+    Adjust --> Start_Work
+    More_Resources --> Start_Work
+    Change_Goal --> Start_Work
+    
+    Continue --> Done{Goal Achieved?}
+    
+    Done -->|Yes| Success[We Did It!]
+    Done -->|No| Check_Budget{Still Have Budget?}
+    
+    Check_Budget -->|Yes| Watch
+    Check_Budget -->|No| Decision[Stop or Get More?]
+    
+    Success --> Report[Create Final Report]
+    Decision --> Report
+    Report --> End[Project Complete]
+
+    style Start fill:#e1f5fe
+    style Create fill:#fff59d
+    style Watch fill:#fff9c4
+    style Done fill:#f3e5f5
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: mermaid-diagrams/guardrails-safety-patterns.mmd
+================================================
+graph TD
+    Start[Someone Sends Input] --> Clean[Clean the Input]
+    
+    Clean --> Check{Check for Problems}
+    
+    Check --> Personal[Personal Info]
+    Check --> Attack[Hacking Attempts]
+    Check --> Bad[Harmful Content]
+    
+    Personal --> Hide[Hide Personal Info]
+    Attack --> Block[Block the Attack]
+    Bad --> Remove[Remove Bad Content]
+    
+    Hide --> Risk[Check Risk Level]
+    Block --> Risk
+    Remove --> Risk
+    
+    Risk --> Level{How Risky Is It?}
+    
+    Level -->|Low Risk| GoAhead[Process Normally]
+    Level -->|Medium Risk| Careful[Add Limits]
+    Level -->|High Risk| Review[Need Human Review]
+    Level -->|Very High Risk| Stop[Block Completely]
+    
+    GoAhead --> DoWork[Do the Work]
+    Careful --> DoWork
+    Review --> Human[Human Checks It]
+    
+    DoWork --> Output[Create Response]
+    Human --> Output
+    
+    Output --> CheckOutput{Check the Response}
+    
+    CheckOutput --> Rules[Check Company Rules]
+    Rules --> Ethics[Is It Ethical?]
+    Rules --> Legal[Is It Legal?]
+    Rules --> Brand[Does It Match Our Values?]
+    
+    Ethics --> Score[Safety Score]
+    Legal --> Score
+    Brand --> Score
+    
+    Score --> Safe{Is It Safe Enough?}
+    
+    Safe -->|Yes| Limits[Check Tool Limits]
+    Safe -->|No| Pass[Allow Response]
+    
+    Limits --> Protected[Use Protected Mode]
+    Protected --> Permissions[Check Permissions]
+    Permissions --> Approve[Need Approval]
+    
+    Approve --> Final{Final Decision}
+    Pass --> Final
+    
+    Final -->|Allow| Send[Send to User]
+    Final -->|Change| Edit[Fix the Response]
+    Final -->|Block| Reject[Explain Why Not]
+    
+    Send --> Log[Record What Happened]
+    Edit --> Log
+    Reject --> Log
+    Stop --> Log
+    
+    Log --> Watch[Watch for Patterns]
+    Watch --> Override{Can Human Override?}
+    
+    Override -->|Yes| Update[Update Rules]
+    Override -->|No| Learn[System Learns]
+    
+    Update --> End[Safety Check Complete]
+    Learn --> End
+
+    style Start fill:#e1f5fe
+    style Level fill:#ffccbc
+    style CheckOutput fill:#fff59d
+    style Final fill:#fff9c4
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: mermaid-diagrams/human-in-the-loop.mmd
+================================================
+graph TD
+    Start[Agent Processing] --> Identify[Identify Decision Points]
+    
+    Identify --> Gates{Decision Gates}
+    
+    Gates --> Approve[Approval Required]
+    Gates --> Review[Review Needed]
+    Gates --> Edit[Editing Checkpoint]
+    Gates --> Complex[Complex Case]
+    
+    Approve --> Queue[Add to Review Queue]
+    Review --> Queue
+    Edit --> Queue
+    Complex --> Queue
+    
+    Queue --> Batch[Batch Similar Items]
+    Batch --> Priority[Prioritize by Urgency]
+    
+    Priority --> UI[Present in UI]
+    UI --> Context[Show Full Context]
+    Context --> Diff[Display Differences]
+    Diff --> SLA[Show SLA Timer]
+    
+    SLA --> Human{Human Decision}
+    
+    Human -->|Approve| Accept[Accept Agent Output]
+    Human -->|Deny| Reject[Reject with Reason]
+    Human -->|Edit| Modify[Human Edits Content]
+    Human -->|Takeover| Manual[Full Manual Control]
+    
+    Accept --> Continue[Continue Workflow]
+    Reject --> Learn1[Capture Rejection Pattern]
+    Modify --> Learn2[Record Edit Changes]
+    Manual --> Learn3[Log Takeover Reason]
+    
+    Learn1 --> Update[Update Agent Training]
+    Learn2 --> Update
+    Learn3 --> Update
+    
+    Update --> Improve[Improve Future Decisions]
+    
+    Continue --> Track[Track Decision Metrics]
+    Improve --> Track
+    
+    Track --> Fatigue{Monitor Fatigue}
+    
+    Fatigue -->|High| Reduce[Reduce Human Load]
+    Fatigue -->|Normal| Maintain[Maintain Current Flow]
+    
+    Reduce --> Automate[Increase Automation]
+    Maintain --> Report[Generate Reports]
+    Automate --> Report
+    
+    Report --> End[Process Complete]
+
+    style Start fill:#e1f5fe
+    style Gates fill:#fff59d
+    style Human fill:#fff9c4
+    style Fatigue fill:#f3e5f5
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: mermaid-diagrams/inter-agent-communication-a2a.mmd
+================================================
+graph TD
+    Start[Multiple AI Agents Need to Talk] --> Choose{How Should They Communicate?}
+    
+    Choose -->|One Boss| Manager[One Agent Manages Others]
+    Choose -->|Everyone Equal| Direct[Agents Talk Directly]
+    Choose -->|Post Office| Mailbox[Central Message System]
+    
+    Manager --> Setup[Set Up Communication Rules]
+    Direct --> Setup
+    Mailbox --> Setup
+    
+    Setup --> Rules[Message Rules]
+    Rules --> Track[Tracking Number for Each Message]
+    Rules --> Expire[Messages Expire After Time Limit]
+    Rules --> Important[Mark Important Messages]
+    
+    Track --> Check{Check Who Can Talk}
+    Expire --> Check
+    Important --> Check
+    
+    Check --> Verify[Verify Agent Identity]
+    Verify --> Permission[Check What They Can Do]
+    Permission --> Allow[Allow Communication]
+    
+    Allow --> Send[Send Message]
+    Send --> Deliver[Deliver to Right Agent]
+    
+    Deliver --> Receive[Agent Gets Message]
+    Receive --> Process[Process Message]
+    
+    Process --> Reply{Need to Reply?}
+    
+    Reply -->|Yes| Answer[Send Answer Back]
+    Reply -->|No| Log[Record Message Received]
+    
+    Answer --> Watch[Monitor Conversation]
+    Log --> Watch
+    
+    Watch --> Problems{Any Problems?}
+    
+    Problems -->|Endless Loop| Stop[Stop the Loop]
+    Problems -->|Stuck| Fix[Unstick the Agents]
+    Problems -->|Too Long| Timeout[Cancel Old Messages]
+    Problems -->|All Good| Continue[Keep Going]
+    
+    Stop --> Alert[Alert Human]
+    Fix --> Alert
+    Timeout --> Alert
+    Continue --> Record[Save Conversation History]
+    
+    Alert --> Recover[Fix the Problem]
+    Record --> Report[Create Activity Report]
+    
+    Recover --> End[Communication Complete]
+    Report --> End
+
+    style Start fill:#e1f5fe
+    style Choose fill:#fff59d
+    style Check fill:#fff9c4
+    style Problems fill:#f3e5f5
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: mermaid-diagrams/knowledge-retrieval-rag.mmd
+================================================
+graph TD
+    Start[Documents to Search] --> Read[Read Documents]
+    
+    Read --> Parse[Extract the Text]
+    Parse --> GetInfo[Get Document Info]
+    GetInfo --> AddTags[Add Tags and Labels]
+    
+    AddTags --> Split{How to Split Text?}
+    
+    Split --> Fixed[Equal Size Chunks]
+    Split --> Smart[Natural Breaks]
+    Split --> Context[Keep Related Parts Together]
+    
+    Fixed --> Process[Process Each Chunk]
+    Smart --> Process
+    Context --> Process
+    
+    Process --> Convert[Convert to Searchable Format]
+    Convert --> Store[Store in Search Database]
+    
+    Store --> Ready[System Ready to Search]
+    
+    Ready --> Question[User Asks Question]
+    Question --> Improve[Make Question Better]
+    
+    Improve --> Expand[Add Related Words]
+    Expand --> Search[Search Database]
+    
+    Search --> Find[Find Matching Chunks]
+    Find --> Filter[Remove Irrelevant Ones]
+    
+    Filter --> Rank{Rank by Relevance}
+    
+    Rank --> Score[Give Each a Score]
+    Score --> Sort[Sort Best to Worst]
+    Sort --> Pick[Pick Top Matches]
+    
+    Pick --> Verify[Check Sources are Good]
+    Verify --> Use[Use Sources for Answer]
+    
+    Use --> Generate[Create Answer]
+    Generate --> Cite[Add Source References]
+    
+    Cite --> Quality{Is Answer Good?}
+    
+    Quality -->|Yes| Deliver[Give Answer to User]
+    Quality -->|No| Redo[Try Different Search]
+    
+    Redo --> Adjust[Change Search Settings]
+    Adjust --> Search
+    
+    Deliver --> Track[Track How Well It Worked]
+    Track --> Measure[Measure Success]
+    
+    Measure --> Accuracy[How Accurate?]
+    Measure --> Coverage[How Complete?]
+    
+    Accuracy --> Improve_System[Make System Better]
+    Coverage --> Improve_System
+    
+    Improve_System --> End[Search Complete]
+
+    style Start fill:#e1f5fe
+    style Split fill:#fff59d
+    style Rank fill:#fff9c4
+    style Quality fill:#f3e5f5
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: mermaid-diagrams/learning-and-adaptation.mmd
+================================================
+graph TD
+    Start[System Operation] --> Collect[Collect Feedback Signals]
+    
+    Collect --> Sources{Feedback Sources}
+    Sources --> User[User Corrections]
+    Sources --> Ratings[Quality Ratings]
+    Sources --> Evals[Automated Evaluations]
+    Sources --> Outcomes[Task Outcomes]
+    
+    User --> Aggregate[Aggregate Signals]
+    Ratings --> Aggregate
+    Evals --> Aggregate
+    Outcomes --> Aggregate
+    
+    Aggregate --> Clean{Data Quality Check}
+    Clean -->|Noisy| Filter[Filter Noise]
+    Clean -->|Adversarial| Reject[Reject Malicious]
+    Clean -->|Clean| Process[Process Feedback]
+    
+    Filter --> Validate[Validate Patterns]
+    Reject --> Log[Log Security Event]
+    Process --> Validate
+    
+    Validate --> Learn{Learning Method}
+    
+    Learn -->|Prompts| UpdatePrompts[Update Prompt Templates]
+    Learn -->|Policies| UpdatePolicies[Adjust Decision Policies]
+    Learn -->|Examples| AddExamples[Add to Few-Shot Examples]
+    Learn -->|Preferences| UpdatePrefs[Update Preference Rules]
+    Learn -->|FineTune| PrepareData[Prepare Training Data]
+    
+    UpdatePrompts --> Test[A/B Testing]
+    UpdatePolicies --> Test
+    AddExamples --> Test
+    UpdatePrefs --> Test
+    
+    PrepareData --> Curate[Curate Dataset]
+    Curate --> Train[Fine-tune Adapters]
+    Train --> Test
+    
+    Test --> Monitor{Monitor Performance}
+    
+    Monitor -->|Improvement| Deploy[Deploy Changes]
+    Monitor -->|Regression| Rollback[Rollback Changes]
+    Monitor -->|Neutral| Iterate[Continue Learning]
+    
+    Deploy --> Track[Track Metrics]
+    Rollback --> Analyze[Analyze Failure]
+    Iterate --> Collect
+    
+    Track --> Report[Generate Learning Report]
+    Analyze --> Report
+    Report --> End[System Improved]
+
+    style Start fill:#e1f5fe
+    style Clean fill:#fff9c4
+    style Learn fill:#fff59d
+    style Monitor fill:#f3e5f5
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: mermaid-diagrams/memory-management.mmd
+================================================
+graph TD
+    Start[User Interaction] --> Capture[Capture Information]
+    
+    Capture --> Classify{Classify Memory Type}
+    
+    Classify -->|Immediate| ShortTerm[Short-Term Memory]
+    Classify -->|Experience| Episodic[Episodic Memory]
+    Classify -->|Knowledge| LongTerm[Long-Term Memory]
+    
+    ShortTerm --> Buffer[Conversation Buffer]
+    Episodic --> Events[Event Store]
+    LongTerm --> Knowledge[Knowledge Base]
+    
+    Buffer --> Compress{Context Window Full?}
+    Compress -->|Yes| Summarize[Summarize & Compress]
+    Compress -->|No| Keep[Keep in Buffer]
+    
+    Summarize --> Store[Store Summary]
+    Keep --> Current[Current Context]
+    
+    Events --> Index[Index Memories]
+    Knowledge --> Index
+    Store --> Index
+    
+    Index --> Metadata[Add Metadata]
+    Metadata --> Recency[Recency Score]
+    Metadata --> Frequency[Access Frequency]
+    Metadata --> Topic[Topic Tags]
+    
+    Current --> Retrieve{Retrieve Relevant?}
+    Retrieve -->|Yes| Query[Query Memory Store]
+    Retrieve -->|No| Process[Process Request]
+    
+    Query --> Filter[Apply Filters]
+    Filter --> Role[By Role/Task]
+    Filter --> Time[By Time Range]
+    Filter --> Relevance[By Topic Match]
+    
+    Role --> Select[Select Memories]
+    Time --> Select
+    Relevance --> Select
+    
+    Select --> TTL{Check TTL}
+    TTL -->|Expired| Forget[Remove/Archive]
+    TTL -->|Valid| Load[Load to Context]
+    
+    Forget --> Audit[Audit Trail]
+    Load --> Process
+    
+    Process --> Privacy{Privacy Check}
+    Privacy -->|Sensitive| Redact[Redact Data]
+    Privacy -->|Safe| Write[Write to Memory]
+    
+    Redact --> Write
+    Write --> Update[Update Memories]
+    Update --> End[Continue Interaction]
+
+    style Start fill:#e1f5fe
+    style Classify fill:#fff59d
+    style Compress fill:#fff9c4
+    style Privacy fill:#ffccbc
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: mermaid-diagrams/model-context-protocol.mmd
+================================================
+graph TD
+    Start[System Starts Up] --> List[List All Available Tools]
+    
+    List --> Tools[Register Tools]
+    List --> Data[Register Data Sources]
+    List --> Services[Register Services]
+    
+    Tools --> Describe1[Describe What Tool Does]
+    Data --> Describe2[Describe What Data Contains]
+    Services --> Describe3[Describe What Service Offers]
+    
+    Describe1 --> Setup[Set Up Permissions]
+    Describe2 --> Setup
+    Describe3 --> Setup
+    
+    Setup --> Control{Who Can Use What?}
+    
+    Control --> Basic[Basic Access]
+    Basic --> Read[Can View]
+    Basic --> Write[Can Change]
+    Basic --> Run[Can Execute]
+    
+    Read --> Catalog[Create Tool Catalog]
+    Write --> Catalog
+    Run --> Catalog
+    
+    Catalog --> Available[Show What's Available]
+    Available --> Agent[AI Agent Looks for Tools]
+    
+    Agent --> Request{Agent Wants to Use Tool}
+    
+    Request --> Check[Check If Allowed]
+    Check -->|Allowed| Use[Use the Tool]
+    Check -->|Not Allowed| Deny[Explain Why Not]
+    
+    Use --> Execute[Run the Tool]
+    Deny --> Log_Security[Log Security Issue]
+    
+    Execute --> Track[Track What Happened]
+    Track --> Monitor[Monitor Usage]
+    Monitor --> Record[Record in Log]
+    
+    Record --> Version{Is Tool Up to Date?}
+    
+    Version -->|Current| Success[Return Result]
+    Version -->|Old but Works| Warning[Warn But Continue]
+    Version -->|Too Old| Error[Stop and Update]
+    
+    Success --> Save[Save the Contract]
+    Warning --> Update_Soon[Plan to Update]
+    Error --> Must_Update[Force Update Now]
+    
+    Save --> End[Tool Use Complete]
+    Update_Soon --> End
+    Must_Update --> End
+
+    style Start fill:#e1f5fe
+    style Control fill:#fff9c4
+    style Request fill:#fff59d
+    style Version fill:#f3e5f5
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: mermaid-diagrams/multi-agent-collaboration.mmd
+================================================
+graph TD
+    Start[Complex Task] --> Define[Define Specialist Roles]
+    
+    Define --> Roles[Agent Role Assignment]
+    Roles --> A1[Research Agent]
+    Roles --> A2[Analysis Agent]
+    Roles --> A3[Writer Agent]
+    Roles --> A4[Reviewer Agent]
+    Roles --> A5[Coordinator Agent]
+    
+    Roles --> Setup[Setup Shared Resources]
+    Setup --> Memory[Shared Memory Store]
+    Setup --> Artifacts[Artifact Repository]
+    Setup --> Version[Version Control]
+    
+    Memory --> Protocol{Coordination Protocol}
+    Artifacts --> Protocol
+    Version --> Protocol
+    
+    Protocol -->|Orchestrator| Orchestrate[Central Coordinator]
+    Protocol -->|Mesh| Mesh[Peer-to-Peer]
+    Protocol -->|Pipeline| Pipeline[Sequential Handoff]
+    
+    Orchestrate --> Coord[Coordinator Manages Flow]
+    Coord --> Task1[Assign to Research Agent]
+    Task1 --> Hand1[Handoff Contract Check]
+    Hand1 --> Task2[Pass to Analysis Agent]
+    Task2 --> Hand2[Handoff Contract Check]
+    Hand2 --> Task3[Send to Writer Agent]
+    Task3 --> Hand3[Handoff Contract Check]
+    Hand3 --> Task4[Review Agent Validation]
+    
+    Mesh --> Peer[Agents Communicate Directly]
+    Pipeline --> Sequence[Fixed Order Processing]
+    
+    Task4 --> Test{Acceptance Test}
+    Peer --> Test
+    Sequence --> Test
+    
+    Test -->|Pass| Log[Log Conversation Trace]
+    Test -->|Fail| Retry[Retry Collaboration]
+    
+    Retry --> Simulate[Run Simulation]
+    Simulate --> Protocol
+    
+    Log --> Decision[Record Decisions]
+    Decision --> Output[Consolidated Output]
+    Output --> End[Deliver Result]
+
+    style Start fill:#e1f5fe
+    style Protocol fill:#fff59d
+    style Test fill:#fff9c4
+    style Output fill:#f3e5f5
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: mermaid-diagrams/parallelization.mmd
+================================================
+graph TD
+    Start[Big Job to Do] --> Look[Look at the Work]
+    Look --> Split[Split Into Smaller Pieces]
+    
+    Split --> Check{Do We Have Resources?}
+    Check -->|Yes| Start_Workers[Start Multiple Workers]
+    Check -->|Limited| Queue[Take Turns with Limited Workers]
+    
+    Start_Workers --> W1[Worker 1: Do Piece A]
+    Start_Workers --> W2[Worker 2: Do Piece B]
+    Start_Workers --> W3[Worker 3: Do Piece C]
+    Start_Workers --> W4[Worker 4: Do Piece D]
+    Queue --> Batch[Work in Small Groups]
+    
+    W1 --> Try1{Did It Work?}
+    W2 --> Try2{Did It Work?}
+    W3 --> Try3{Did It Work?}
+    W4 --> Try4{Did It Work?}
+    Batch --> Try5{Did It Work?}
+    
+    Try1 -->|Yes| Collect[Collect All Results]
+    Try1 -->|No| Wait1[Wait and Try Again]
+    Try2 -->|Yes| Collect
+    Try2 -->|No| Wait2[Wait and Try Again]
+    Try3 -->|Yes| Collect
+    Try3 -->|No| Wait3[Wait and Try Again]
+    Try4 -->|Yes| Collect
+    Try4 -->|No| Wait4[Wait and Try Again]
+    Try5 -->|Yes| Collect
+    Try5 -->|No| Wait5[Wait and Try Again]
+    
+    Wait1 --> W1
+    Wait2 --> W2
+    Wait3 --> W3
+    Wait4 --> W4
+    Wait5 --> Batch
+    
+    Collect --> Organize[Organize Results]
+    Organize --> Combine[Combine Everything]
+    Combine --> Final[Create Final Result]
+    Final --> Summary[Create Summary Report]
+    Summary --> End[Job Complete]
+
+    style Start fill:#e1f5fe
+    style Start_Workers fill:#fff59d
+    style Collect fill:#f3e5f5
+    style End fill:#c8e6c9
+    style Check fill:#fff9c4
+
+
+================================================
+FILE: mermaid-diagrams/planning.mmd
+================================================
+graph TD
+    Start[Goal Input] --> Decompose[Decompose into Milestones]
+    Decompose --> Map[Create Dependency Graph]
+    
+    Map --> Constraints{Check Constraints}
+    Constraints --> Data[Data Availability]
+    Constraints --> Auth[Authorization Check]
+    Constraints --> Budget[Budget Limits]
+    Constraints --> Time[Deadlines/SLAs]
+    
+    Data --> Plan[Generate Step-by-Step Plan]
+    Auth --> Plan
+    Budget --> Plan
+    Time --> Plan
+    
+    Plan --> Assign[Assign Agent/Tool per Step]
+    Assign --> Step1[Execute Step 1]
+    
+    Step1 --> Check1{Checkpoint}
+    Check1 -->|Success| Step2[Execute Step 2]
+    Check1 -->|Blocked| Analyze[Analyze Blocker]
+    
+    Step2 --> Check2{Checkpoint}
+    Check2 -->|Success| Step3[Execute Step 3]
+    Check2 -->|Issue| Analyze
+    
+    Step3 --> Check3{Checkpoint}
+    Check3 -->|Success| StepN[Execute Step N]
+    Check3 -->|Problem| Analyze
+    
+    Analyze --> NewInfo{New Information?}
+    NewInfo -->|Yes| Replan[Adjust Plan]
+    NewInfo -->|No| Escalate[Escalate Issue]
+    
+    Replan --> Assign
+    Escalate --> Handle[Handle Exception]
+    
+    StepN --> Progress[Track Progress]
+    Progress --> Complete{Goals Met?}
+    
+    Complete -->|Yes| Accept[Acceptance Criteria Check]
+    Complete -->|No| Analyze
+    
+    Accept --> PostMortem[Generate Post-Mortem]
+    Handle --> PostMortem
+    PostMortem --> End[Close Task]
+
+    style Start fill:#e1f5fe
+    style Constraints fill:#fff9c4
+    style NewInfo fill:#fff59d
+    style Complete fill:#f3e5f5
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: mermaid-diagrams/prioritization.mmd
+================================================
+graph TD
+    Start[Task Queue] --> Build[Build Dependency Graph]
+    
+    Build --> Map[Map Dependencies]
+    Map --> Tasks[Task List]
+    Tasks --> T1[Task 1]
+    Tasks --> T2[Task 2]
+    Tasks --> T3[Task 3]
+    Tasks --> TN[Task N]
+    
+    T1 --> Score[Score Each Task]
+    T2 --> Score
+    T3 --> Score
+    TN --> Score
+    
+    Score --> Value{Scoring Factors}
+    
+    Value --> Business[Business Value]
+    Value --> Risk[Risk Level]
+    Value --> Effort[Effort Required]
+    Value --> Urgency[Time Sensitivity]
+    Value --> Dependencies[Dependency Count]
+    
+    Business --> Calculate[Calculate Priority Score]
+    Risk --> Calculate
+    Effort --> Calculate
+    Urgency --> Calculate
+    Dependencies --> Calculate
+    
+    Calculate --> Formula[Priority = Value/Effort × Urgency × Risk]
+    
+    Formula --> Rank[Rank Tasks]
+    Rank --> Order[Initial Order]
+    
+    Order --> Schedule{Scheduling Strategy}
+    
+    Schedule --> Quota[Apply Quotas]
+    Schedule --> Aging[Task Aging]
+    Schedule --> Balance[Load Balance]
+    
+    Quota --> Prevent[Prevent Starvation]
+    Aging --> Boost[Boost Old Tasks]
+    Balance --> Distribute[Distribute Work]
+    
+    Prevent --> Queue2[Priority Queue]
+    Boost --> Queue2
+    Distribute --> Queue2
+    
+    Queue2 --> Execute[Execute Top Task]
+    
+    Execute --> Monitor{New High Priority?}
+    
+    Monitor -->|Yes| Preempt[Preempt Current]
+    Monitor -->|No| Continue[Continue Current]
+    
+    Preempt --> Save[Save State]
+    Save --> Switch[Switch to High Priority]
+    
+    Continue --> Complete{Task Complete?}
+    Switch --> Complete
+    
+    Complete -->|Yes| Remove[Remove from Queue]
+    Complete -->|No| Execute
+    
+    Remove --> Events{New Events?}
+    
+    Events -->|Yes| Reorder[Re-calculate Priorities]
+    Events -->|No| Next[Get Next Task]
+    
+    Reorder --> Rank
+    Next --> Execute
+    
+    Next --> End[Optimized Execution]
+
+    style Start fill:#e1f5fe
+    style Value fill:#fff59d
+    style Schedule fill:#fff9c4
+    style Monitor fill:#f3e5f5
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: mermaid-diagrams/prompt-chaining.mmd
+================================================
+graph TD
+    Start[User Request] --> Break[Break Down Into Small Steps]
+    Break --> Define[Set Rules for Each Step]
+    Define --> Task1[Do First Task]
+    Task1 --> Check1{Is Output Good?}
+    Check1 -->|Yes| Task2[Do Second Task]
+    Check1 -->|No| Retry1[Try Again]
+    Retry1 --> Task1
+    Task2 --> Check2{Is Output Good?}
+    Check2 -->|Yes| Task3[Do Third Task with Tools]
+    Check2 -->|No| Retry2[Try Again]
+    Retry2 --> Task2
+    Task3 --> Check3{Is Output Good?}
+    Check3 -->|Yes| Combine[Combine All Results]
+    Check3 -->|No| Retry3[Try Again]
+    Retry3 --> Task3
+    Combine --> Build[Build Final Answer]
+    Build --> Save[Save Work and Notes]
+    Save --> End[Deliver Complete Result]
+
+    style Start fill:#e1f5fe
+    style End fill:#c8e6c9
+    style Check1 fill:#fff9c4
+    style Check2 fill:#fff9c4
+    style Check3 fill:#fff9c4
+    style Task3 fill:#f3e5f5
+
+
+================================================
+FILE: mermaid-diagrams/reasoning-techniques.mmd
+================================================
+graph TD
+    Start[Hard Problem to Solve] --> Choose{Pick Best Way to Think}
+    
+    Choose -->|Step by Step| StepByStep[Think Through Each Step]
+    Choose -->|Explore Options| Tree[Explore Different Paths]
+    Choose -->|Double Check| Multiple[Try Multiple Ways]
+    Choose -->|Debate It| Debate[Argue Both Sides]
+    Choose -->|Think and Do| ThinkDo[Think Then Act, Repeat]
+    
+    StepByStep --> Steps[Break Into Steps]
+    Steps --> Think1[Step 1: First Thought]
+    Think1 --> Think2[Step 2: Next Thought]
+    Think2 --> Think3[Step 3: Final Thought]
+    
+    Tree --> Branch[Create Different Ideas]
+    Branch --> Explore[Explore Each Path]
+    Explore --> Compare[Compare Options]
+    Compare --> Remove[Remove Bad Paths]
+    
+    Multiple --> Make[Make Several Solutions]
+    Make --> Path1[Solution Method 1]
+    Make --> Path2[Solution Method 2]
+    Make --> Path3[Solution Method 3]
+    
+    Debate --> For[Arguments For]
+    Debate --> Against[Arguments Against]
+    For --> Discuss[Compare Arguments]
+    Against --> Discuss
+    
+    ThinkDo --> Think[Think About It]
+    Think --> Act[Take Action]
+    Act --> See[See What Happens]
+    See --> Think
+    
+    Think3 --> Grade[Grade Solutions]
+    Remove --> Grade
+    Path1 --> Grade
+    Path2 --> Grade
+    Path3 --> Grade
+    Discuss --> Grade
+    
+    Grade --> Test{Test Against Standards}
+    
+    Test --> Check[Check Logic]
+    Check --> Verify[Verify It Works]
+    Verify --> Rank[Rank Best to Worst]
+    
+    Rank --> Pick{Pick Winner}
+    
+    Pick -->|One Best| UseBest[Use Best Solution]
+    Pick -->|Several Good| Combine[Combine Good Parts]
+    
+    UseBest --> Limit{Too Many Steps?}
+    Combine --> Limit
+    
+    Limit -->|OK| Continue[Keep Going]
+    Limit -->|Too Many| Trim[Remove Extra Steps]
+    
+    Continue --> Save[Save the Work]
+    Trim --> Save
+    
+    Save --> Keep[Keep for Later Use]
+    Keep --> CanReuse[Can Use Again]
+    
+    CanReuse --> Answer[Final Solution]
+    Answer --> End[Problem Solved]
+
+    style Start fill:#e1f5fe
+    style Choose fill:#fff59d
+    style Test fill:#fff9c4
+    style Pick fill:#f3e5f5
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: mermaid-diagrams/reflection.mmd
+================================================
+graph TD
+    Start[Initial Request] --> Generate[Generate First Draft]
+    Generate --> Output1[Initial Output]
+    
+    Output1 --> Critic{Critic Agent Review}
+    
+    Critic --> Rubric[Apply Quality Rubrics]
+    Critic --> Tests[Run Unit Tests]
+    Critic --> Check[Grammar & Logic Check]
+    
+    Rubric --> Score1{Quality Score}
+    Tests --> Score2{Test Results}
+    Check --> Score3{Check Results}
+    
+    Score1 --> Evaluate{Meets Criteria?}
+    Score2 --> Evaluate
+    Score3 --> Evaluate
+    
+    Evaluate -->|No| Feedback[Generate Structured Feedback]
+    Evaluate -->|Yes| Accept[Accept Output]
+    
+    Feedback --> Revise[Revision Agent]
+    Revise --> Address[Address Each Issue]
+    Address --> Output2[Revised Output]
+    
+    Output2 --> Counter{Iteration Count}
+    Counter -->|< Max| Critic
+    Counter -->|>= Max| Converge[Use Best Version]
+    
+    Accept --> Record[Record Success Patterns]
+    Converge --> Record
+    
+    Record --> Learn[Update Prompts/Rules]
+    Learn --> Final[Final Output]
+    Final --> End[Deliver Result]
+
+    style Start fill:#e1f5fe
+    style Critic fill:#fff59d
+    style Evaluate fill:#fff9c4
+    style Accept fill:#c8e6c9
+    style Converge fill:#ffccbc
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: mermaid-diagrams/resource-aware-optimization.mmd
+================================================
+graph TD
+    Start[Task Request] --> Analyze[Analyze Complexity]
+    
+    Analyze --> Budget{Set Budgets}
+    
+    Budget --> Token[Token Limits]
+    Budget --> Time[Time Constraints]
+    Budget --> Cost[Money Budget]
+    
+    Token --> Router[Router Agent]
+    Time --> Router
+    Cost --> Router
+    
+    Router --> Classify{Classify Complexity}
+    
+    Classify -->|Simple| Cheap[Use Small Model]
+    Classify -->|Medium| Standard[Use Standard Model]
+    Classify -->|Complex| Premium[Use Advanced Model]
+    Classify -->|Unknown| Test[Run Quick Test]
+    
+    Test --> Confidence{Check Confidence}
+    
+    Confidence -->|Low| Escalate[Escalate to Better Model]
+    Confidence -->|High| Proceed[Continue with Current]
+    
+    Cheap --> Execute[Execute Task]
+    Standard --> Execute
+    Premium --> Execute
+    Escalate --> Execute
+    Proceed --> Execute
+    
+    Execute --> Monitor[Monitor Resources]
+    
+    Monitor --> Track{Track Usage}
+    
+    Track --> Tokens[Token Count]
+    Track --> Latency[Response Time]
+    Track --> Costs[API Costs]
+    
+    Tokens --> Check{Within Limits?}
+    Latency --> Check
+    Costs --> Check
+    
+    Check -->|Yes| Continue[Continue Processing]
+    Check -->|No| Optimize[Optimization Needed]
+    
+    Optimize --> Prune[Prune Context]
+    Optimize --> Cache[Use Cached Results]
+    Optimize --> Downgrade[Switch to Cheaper Model]
+    
+    Prune --> Retry[Retry Operation]
+    Cache --> Retry
+    Downgrade --> Retry
+    
+    Continue --> Complete[Task Complete]
+    Retry --> Monitor
+    
+    Complete --> Measure[Measure Quality/Cost]
+    Measure --> Delta[Calculate Delta]
+    
+    Delta --> Tune[Tune Thresholds]
+    Tune --> Learn[Update Router Logic]
+    
+    Learn --> Report[Generate Report]
+    Report --> End[Optimized Execution]
+
+    style Start fill:#e1f5fe
+    style Classify fill:#fff59d
+    style Check fill:#fff9c4
+    style Delta fill:#f3e5f5
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: mermaid-diagrams/routing.mmd
+================================================
+graph TD
+    Start[Customer Request] --> Look[Look at What They Need]
+    Look --> Decide{Which Expert Should Handle This?}
+    
+    Decide -->|Technical Problem| Tech[Send to Tech Support]
+    Decide -->|Want to Buy| Sales[Send to Sales Team]
+    Decide -->|Account Question| Account[Send to Account Help]
+    Decide -->|General Question| General[Send to General Assistant]
+    Decide -->|Not Sure| Ask[Ask for More Details]
+    
+    Tech --> TechTools[Give Access to Tech Guides]
+    Sales --> SalesTools[Give Access to Product Info]
+    Account --> AccountTools[Give Access to User Account]
+    General --> GeneralTools[Give Access to FAQ]
+    
+    TechTools --> Work1[Work on Tech Problem]
+    SalesTools --> Work2[Work on Sales Question]
+    AccountTools --> Work3[Work on Account Issue]
+    GeneralTools --> Work4[Work on General Question]
+    Ask --> Understand[Better Understand Request]
+    
+    Work1 --> Check{Is Answer Good?}
+    Work2 --> Check
+    Work3 --> Check
+    Work4 --> Check
+    Understand --> Decide
+    
+    Check -->|Yes| Answer[Send Answer to Customer]
+    Check -->|No| Backup[Get Human Help]
+    
+    Answer --> Record[Record What Happened]
+    Backup --> Record
+    Record --> End[Complete]
+
+    style Start fill:#e1f5fe
+    style Decide fill:#fff59d
+    style Ask fill:#ffccbc
+    style Check fill:#fff9c4
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: mermaid-diagrams/tool-use.mmd
+================================================
+graph TD
+    Start[User Request] --> Analyze[Analyze Task Requirements]
+    Analyze --> Discover[Discover Available Tools]
+    
+    Discover --> Catalog[Tool Catalog]
+    Catalog --> API1[Web Search API]
+    Catalog --> API2[Database Query Tool]
+    Catalog --> API3[Calculator Function]
+    Catalog --> API4[File System Access]
+    Catalog --> API5[External Service API]
+    
+    Catalog --> Select{Select Appropriate Tool}
+    
+    Select --> Match[Match Capabilities to Need]
+    Match --> Safety{Safety Check}
+    
+    Safety -->|Pass| Prepare[Prepare Tool Call]
+    Safety -->|Fail| Deny[Deny Access with Reason]
+    
+    Prepare --> Validate[Validate Input Parameters]
+    Validate --> Call[Execute Tool with Arguments]
+    
+    Call --> Handle{Handle Response}
+    Handle -->|Success| Parse[Parse Tool Output]
+    Handle -->|Error| ErrorHandle[Error Recovery]
+    Handle -->|Timeout| Retry[Retry with Backoff]
+    
+    ErrorHandle --> Fallback[Use Fallback Method]
+    Retry --> Call
+    
+    Parse --> Normalize[Normalize for LLM]
+    Fallback --> Normalize
+    
+    Normalize --> Process[Process with Context]
+    Process --> Decision{Next Action?}
+    
+    Decision -->|More Tools| Select
+    Decision -->|Complete| Audit[Audit Tool Usage]
+    
+    Deny --> Log[Log Security Event]
+    Audit --> Redact[Redact Sensitive Data]
+    Log --> Redact
+    
+    Redact --> Result[Generate Final Response]
+    Result --> End[Return to User]
+
+    style Start fill:#e1f5fe
+    style Select fill:#fff59d
+    style Safety fill:#ffccbc
+    style Handle fill:#fff9c4
+    style End fill:#c8e6c9
+
+
+================================================
+FILE: pattern-discussion/evaluation-and-monitoring.md
+================================================
+# Evaluation and Monitoring Pattern
+
+## When to Use
+
+- **Production systems**: Any system requiring reliability
+- **Quality assurance**: Ensuring consistent performance
+- **Compliance requirements**: Meeting regulatory standards
+- **Performance optimization**: Identifying bottlenecks
+- **Cost management**: Tracking resource usage
+- **Continuous improvement**: Data-driven optimization
+
+## Where It Fits
+
+- **Enterprise AI deployments**: Mission-critical systems
+- **SaaS platforms**: Multi-tenant service monitoring
+- **Healthcare systems**: Patient safety monitoring
+- **Financial services**: Trading system oversight
+- **E-commerce**: Transaction and recommendation monitoring
+
+## Pros
+
+- **Reliability**: Early detection of issues
+- **Performance visibility**: Clear system insights
+- **Quality assurance**: Consistent output standards
+- **Cost control**: Resource usage tracking
+- **Compliance**: Audit trail maintenance
+- **Improvement data**: Metrics guide optimization
+- **User trust**: Transparent performance metrics
+
+## Cons
+
+- **Infrastructure overhead**: Monitoring systems require resources
+- **Complexity**: Managing multiple metrics and alerts
+- **Alert fatigue**: Too many notifications
+- **Storage costs**: Logging and metrics data
+- **Performance impact**: Instrumentation adds overhead
+- **Maintenance burden**: Keeping tests updated
+- **False positives**: Unnecessary alerts and rollbacks
+
+## Real-World Examples
+
+1. **E-commerce Recommendation Engine**:
+   - Click-through rate monitoring
+   - Conversion tracking
+   - A/B test evaluation
+   - Latency monitoring
+   - Cost per recommendation
+   - Drift detection in user preferences
+
+2. **Customer Service Chatbot**:
+   - Resolution rate tracking
+   - Customer satisfaction scores
+   - Response time monitoring
+   - Escalation rate analysis
+   - Cost per interaction
+   - Quality sampling and review
+
+3. **Financial Trading System**:
+   - Trade execution monitoring
+   - Slippage tracking
+   - Risk limit compliance
+   - Latency measurements
+   - Profit/loss attribution
+   - Regulatory audit logs
+
+4. **Content Moderation Platform**:
+   - Accuracy metrics (precision/recall)
+   - False positive rates
+   - Processing time per item
+   - Human agreement scores
+   - Cost per moderation
+   - Policy violation trends
+
+5. **Medical Diagnosis AI**:
+   - Diagnostic accuracy rates
+   - False negative monitoring
+   - Time to diagnosis
+   - Clinician agreement scores
+   - System availability metrics
+   - Patient outcome tracking
+
+6. **Code Generation Tool**:
+   - Code quality metrics
+   - Compilation success rates
+   - Test pass rates
+   - Developer acceptance rates
+   - Generation time tracking
+   - Usage pattern analysis
+
+
+================================================
+FILE: pattern-discussion/exception-handling-and-recovery.md
+================================================
+# Exception Handling and Recovery Pattern
+
+## When to Use
+
+- **Production environments**: Any system requiring high reliability
+- **External dependencies**: When relying on APIs or services
+- **Critical operations**: Tasks that must not fail completely
+- **Unpredictable inputs**: Handling edge cases and anomalies
+- **Network operations**: Managing connectivity issues
+- **Resource constraints**: Dealing with limits and quotas
+
+## Where It Fits
+
+- **API integrations**: Handling service outages and rate limits
+- **Data pipelines**: Managing corrupt data and processing failures
+- **User-facing systems**: Maintaining service availability
+- **Financial transactions**: Ensuring transaction integrity
+- **IoT systems**: Handling device failures and connectivity issues
+
+## Pros
+
+- **Reliability**: System continues operating despite failures
+- **Graceful degradation**: Provides partial functionality when full service unavailable
+- **Self-healing**: Automatic recovery from transient issues
+- **User experience**: Minimizes disruption to users
+- **Debugging support**: Comprehensive error logging
+- **Learning capability**: Improves handling over time
+- **State preservation**: Can resume after interruptions
+
+## Cons
+
+- **Complexity increase**: Error handling adds code complexity
+- **Performance overhead**: Try/catch and retries add latency
+- **False positives**: May retry when unnecessary
+- **Resource consumption**: Retries and fallbacks use resources
+- **Cascading failures**: Poor handling can worsen problems
+- **Testing difficulty**: Hard to test all failure scenarios
+- **Maintenance burden**: Error handling code needs updates
+
+## Real-World Examples
+
+1. **Payment Processing System**:
+   - Retry failed transactions with backoff
+   - Fallback to alternative payment gateways
+   - Save transaction state for manual review
+   - Notify finance team of critical failures
+   - Automatic refund on persistent failures
+
+2. **Data Integration Pipeline**:
+   - Handle malformed data gracefully
+   - Retry failed API calls with jitter
+   - Use cached data when services unavailable
+   - Checkpoint progress for resume capability
+   - Alert on data quality issues
+
+3. **Chatbot Customer Service**:
+   - Fallback to simpler responses on errors
+   - Escalate to human agents when stuck
+   - Save conversation state for handoff
+   - Retry knowledge base queries
+   - Default to FAQ responses
+
+4. **Content Delivery Network**:
+   - Retry failed origin fetches
+   - Serve stale content when origin down
+   - Route to backup servers
+   - Implement circuit breakers
+   - Geographic failover strategies
+
+5. **Machine Learning Pipeline**:
+   - Handle model loading failures
+   - Fallback to simpler models
+   - Retry failed predictions
+   - Cache frequent predictions
+   - Graceful degradation of features
+
+6. **IoT Device Management**:
+   - Retry failed device commands
+   - Queue commands for offline devices
+   - Use last known state as fallback
+   - Implement watchdog timers
+   - Automatic device reboot protocols
+
+
+================================================
+FILE: pattern-discussion/exploration-and-discovery.md
+================================================
+# Exploration and Discovery Pattern
+
+## When to Use
+
+- **Research projects**: Investigating new domains
+- **Innovation initiatives**: Finding breakthrough opportunities
+- **Problem spaces**: Understanding complex challenges
+- **Knowledge gaps**: Identifying what's unknown
+- **Competitive analysis**: Discovering market opportunities
+- **Scientific research**: Generating and testing hypotheses
+
+## Where It Fits
+
+- **R&D departments**: New product development
+- **Academic research**: Scientific investigation
+- **Market research**: Opportunity identification
+- **Drug discovery**: Pharmaceutical research
+- **Technology scouting**: Emerging tech exploration
+
+## Pros
+
+- **Innovation enablement**: Discovers new possibilities
+- **Comprehensive coverage**: Broad exploration of space
+- **Pattern recognition**: Identifies hidden connections
+- **Hypothesis generation**: Creates testable theories
+- **Knowledge building**: Accumulates domain expertise
+- **Serendipity**: Enables unexpected discoveries
+- **Systematic approach**: Structured exploration process
+
+## Cons
+
+- **Time intensive**: Exploration takes significant time
+- **Resource heavy**: Requires substantial compute/data
+- **Uncertain outcomes**: No guaranteed discoveries
+- **Scope creep**: Can expand beyond boundaries
+- **Information overload**: Managing vast amounts of data
+- **Direction challenges**: Deciding where to focus
+- **ROI uncertainty**: Value may not be immediate
+
+## Real-World Examples
+
+1. **Drug Discovery Platform**:
+   - Literature mining for drug targets
+   - Chemical space exploration
+   - Side effect pattern analysis
+   - Clinical trial data mining
+   - Hypothesis generation for compounds
+   - Experimental design optimization
+
+2. **Market Opportunity Finder**:
+   - Consumer trend analysis
+   - Competitor landscape mapping
+   - Technology convergence identification
+   - Unmet need discovery
+   - Business model innovation
+   - Partnership opportunity scouting
+
+3. **Scientific Research Assistant**:
+   - Literature review automation
+   - Cross-discipline connection finding
+   - Experimental design suggestions
+   - Data pattern discovery
+   - Hypothesis generation
+   - Collaboration network building
+
+4. **Technology Innovation Scout**:
+   - Patent landscape analysis
+   - Emerging technology tracking
+   - Research lab monitoring
+   - Startup ecosystem mapping
+   - Technical feasibility assessment
+   - Innovation opportunity ranking
+
+5. **Intelligence Analysis System**:
+   - Open source intelligence gathering
+   - Pattern recognition across sources
+   - Threat landscape mapping
+   - Anomaly detection
+   - Predictive modeling
+   - Strategic assessment generation
+
+6. **Educational Research Platform**:
+   - Learning method exploration
+   - Curriculum gap analysis
+   - Student performance patterns
+   - Pedagogical innovation discovery
+   - Best practice identification
+   - Intervention strategy development
+
+
+================================================
+FILE: pattern-discussion/goal-setting-and-monitoring.md
+================================================
+# Goal Setting and Monitoring Pattern
+
+## When to Use
+
+- **Autonomous operations**: When agents work independently toward objectives
+- **Complex projects**: Multi-step tasks requiring progress tracking
+- **Resource management**: When operating within constraints
+- **Performance optimization**: Achieving specific measurable outcomes
+- **Compliance requirements**: Meeting SLAs and quality standards
+- **Strategic execution**: Aligning agent actions with business goals
+
+## Where It Fits
+
+- **Project automation**: Managing project milestones and deliverables
+- **Sales pipelines**: Tracking targets and conversion goals
+- **Content production**: Meeting publishing schedules and quality standards
+- **System optimization**: Achieving performance benchmarks
+- **Cost management**: Operating within budget constraints
+
+## Pros
+
+- **Purpose-driven**: Agents work toward clear objectives
+- **Self-assessment**: Continuous evaluation of progress
+- **Adaptability**: Dynamic adjustment to changing conditions
+- **Accountability**: Clear metrics and success criteria
+- **Resource efficiency**: Optimal allocation based on priorities
+- **Early warning**: Proactive detection of issues
+- **Measurable outcomes**: Quantifiable success metrics
+
+## Cons
+
+- **Overhead complexity**: Goal management adds system complexity
+- **Rigid constraints**: May limit creative problem-solving
+- **Measurement challenges**: Some goals are hard to quantify
+- **False metrics**: Risk of optimizing wrong indicators
+- **Resource intensive**: Continuous monitoring requires resources
+- **Goal conflicts**: Multiple goals may compete
+- **Over-optimization**: May sacrifice quality for metrics
+
+## Real-World Examples
+
+1. **Sales Automation System**:
+   - Monthly revenue targets with daily tracking
+   - Lead conversion rate goals
+   - Customer acquisition cost limits
+   - Activity metrics (calls, emails, meetings)
+   - Automatic escalation for at-risk deals
+   - Performance dashboard generation
+
+2. **Content Publishing Platform**:
+   - Article publication schedules
+   - Quality score thresholds
+   - SEO performance targets
+   - Engagement metrics goals
+   - Budget allocation per content type
+   - Deadline management with alerts
+
+3. **DevOps Pipeline**:
+   - Deployment frequency targets
+   - Mean time to recovery (MTTR) goals
+   - Test coverage requirements
+   - Performance benchmarks
+   - Cost per deployment limits
+   - Automatic rollback on metric violations
+
+4. **Customer Service Center**:
+   - First response time SLAs
+   - Resolution rate targets
+   - Customer satisfaction scores
+   - Ticket volume management
+   - Cost per interaction limits
+   - Escalation thresholds
+
+5. **Marketing Campaign Manager**:
+   - ROI targets per campaign
+   - Conversion rate goals
+   - Budget allocation limits
+   - A/B test success criteria
+   - Channel performance metrics
+   - Real-time optimization triggers
+
+6. **Supply Chain Optimization**:
+   - Inventory level targets
+   - Order fulfillment SLAs
+   - Cost reduction goals
+   - Delivery time objectives
+   - Quality compliance rates
+   - Automatic reorder triggers
+
+
+================================================
+FILE: pattern-discussion/guardrails-safety-patterns.md
+================================================
+# Guardrails/Safety Patterns
+
+## When to Use
+
+- **Public-facing systems**: Protecting users from harmful content
+- **Regulated industries**: Ensuring compliance with laws
+- **Brand protection**: Maintaining company reputation
+- **Data privacy**: Protecting sensitive information
+- **Security requirements**: Preventing system exploitation
+- **Ethical AI**: Ensuring responsible AI behavior
+
+## Where It Fits
+
+- **Chatbots and assistants**: Customer-facing AI systems
+- **Content generation**: Automated content creation
+- **Healthcare AI**: Medical advice and diagnosis
+- **Financial services**: Trading and advisory systems
+- **Educational platforms**: Student-facing AI tools
+
+## Pros
+
+- **Risk mitigation**: Prevents harmful outputs
+- **Compliance**: Meets regulatory requirements
+- **Brand protection**: Maintains reputation
+- **User safety**: Protects from inappropriate content
+- **Security**: Prevents exploitation attempts
+- **Consistency**: Uniform safety standards
+- **Auditability**: Clear safety decision trails
+
+## Cons
+
+- **False positives**: May block legitimate requests
+- **Latency increase**: Safety checks add processing time
+- **User frustration**: Over-restrictive filtering
+- **Complexity**: Multiple layers of checks
+- **Maintenance burden**: Policies need regular updates
+- **Context blindness**: May miss nuanced safety issues
+- **Cost overhead**: Additional processing and monitoring
+
+## Real-World Examples
+
+1. **Social Media AI Moderator**:
+   - Hate speech detection and filtering
+   - PII redaction in user posts
+   - Misinformation flagging
+   - Violence/graphic content blocking
+   - Copyright violation detection
+   - Appeal process for false positives
+
+2. **Healthcare Chatbot**:
+   - Medical advice disclaimers
+   - Emergency situation detection
+   - Drug interaction warnings
+   - Privacy protection for health data
+   - Scope limitations enforcement
+   - Professional referral triggers
+
+3. **Financial Advisory AI**:
+   - Investment risk warnings
+   - Regulatory compliance checks
+   - Insider trading prevention
+   - Client suitability verification
+   - Market manipulation detection
+   - Audit trail maintenance
+
+4. **Educational AI Tutor**:
+   - Age-appropriate content filtering
+   - Academic integrity protection
+   - Bullying/harassment prevention
+   - Personal information protection
+   - Inappropriate topic blocking
+   - Parent/teacher override options
+
+5. **Enterprise AI Assistant**:
+   - Data classification enforcement
+   - Access control verification
+   - Confidentiality protection
+   - Compliance checking
+   - Security threat detection
+   - Activity logging and monitoring
+
+6. **Content Generation Platform**:
+   - Copyright infringement prevention
+   - Trademark protection
+   - Defamation blocking
+   - Bias detection and mitigation
+   - Fact-checking integration
+   - Quality standards enforcement
+
+
+================================================
+FILE: pattern-discussion/human-in-the-loop.md
+================================================
+# Human-in-the-Loop (HITL) Pattern
+
+## When to Use
+
+- **High-stakes decisions**: When errors have significant consequences
+- **Regulatory compliance**: Required human oversight for legal reasons
+- **Quality assurance**: Ensuring output meets standards
+- **Edge cases**: Handling unusual or ambiguous situations
+- **Training data generation**: Using human feedback to improve
+- **Trust building**: Gradual automation with human validation
+
+## Where It Fits
+
+- **Content moderation**: Reviewing sensitive or borderline content
+- **Medical diagnosis**: Physician verification of AI recommendations
+- **Financial approvals**: Human authorization for large transactions
+- **Legal document review**: Attorney oversight of contracts
+- **Hiring decisions**: Human review of AI-screened candidates
+
+## Pros
+
+- **Quality assurance**: Human judgment catches AI errors
+- **Compliance**: Meets regulatory requirements
+- **Learning source**: Human feedback improves system
+- **Trust**: Users confident in human oversight
+- **Flexibility**: Humans handle edge cases well
+- **Accountability**: Clear responsibility chain
+- **Risk mitigation**: Prevents costly mistakes
+
+## Cons
+
+- **Scalability limits**: Human bandwidth constrains throughput
+- **Cost increase**: Human reviewers are expensive
+- **Latency addition**: Waiting for human response delays process
+- **Inconsistency**: Different humans make different decisions
+- **Fatigue effects**: Quality degrades with reviewer tiredness
+- **Training requirements**: Reviewers need domain expertise
+- **Availability issues**: 24/7 coverage is challenging
+
+## Real-World Examples
+
+1. **Content Moderation Platform**:
+   - AI flags potentially problematic content
+   - Human reviewers make final decisions
+   - Complex cases escalated to senior moderators
+   - Reviewer feedback trains AI models
+   - Fatigue monitoring and rotation schedules
+
+2. **Loan Approval System**:
+   - AI assesses credit risk
+   - Human reviews borderline applications
+   - Large loans require manual approval
+   - Explanations provided for denials
+   - Audit trail for compliance
+
+3. **Medical Imaging Analysis**:
+   - AI detects potential abnormalities
+   - Radiologist confirms diagnoses
+   - Critical findings prioritized for review
+   - Second opinions for complex cases
+   - Continuous learning from corrections
+
+4. **Resume Screening**:
+   - AI filters initial applications
+   - HR reviews shortlisted candidates
+   - Diversity checks by humans
+   - Feedback improves screening algorithms
+   - Final interviews always human-led
+
+5. **Translation Quality Control**:
+   - AI performs initial translation
+   - Human linguists review and edit
+   - Cultural sensitivity checks
+   - Technical terminology verification
+   - Style consistency enforcement
+
+6. **Autonomous Vehicle Monitoring**:
+   - AI handles normal driving
+   - Remote operators handle edge cases
+   - Safety driver takeover capability
+   - Incident review and analysis
+   - Continuous improvement from interventions
+
+
+================================================
+FILE: pattern-discussion/inter-agent-communication-a2a.md
+================================================
+# Inter-Agent Communication (A2A) Pattern
+
+## When to Use
+
+- **Complex workflows**: Tasks requiring multiple specialized agents
+- **Modular systems**: Building composable agent architectures
+- **Distributed processing**: Agents running in different locations
+- **Scalable architectures**: Systems that need to grow
+- **Collaborative tasks**: Agents working together on problems
+- **Service-oriented design**: Agents as microservices
+
+## Where It Fits
+
+- **Enterprise automation**: Coordinating business process agents
+- **Research systems**: Agents collaborating on analysis
+- **Content production**: Pipeline of content creation agents
+- **Trading systems**: Agents coordinating financial decisions
+- **Smart city systems**: IoT and service agents communicating
+
+## Pros
+
+- **Modularity**: Clear separation of agent responsibilities
+- **Scalability**: Easy to add new agents to the system
+- **Flexibility**: Different communication patterns available
+- **Fault isolation**: Agent failures don't crash system
+- **Reusability**: Agents can be reused in different workflows
+- **Debugging support**: Message tracing aids troubleshooting
+- **Parallel processing**: Agents can work simultaneously
+
+## Cons
+
+- **Complexity overhead**: Communication protocols add complexity
+- **Latency accumulation**: Message passing adds delays
+- **Coordination challenges**: Managing agent interactions
+- **Debugging difficulty**: Tracing distributed conversations
+- **State management**: Maintaining consistency across agents
+- **Network dependencies**: Vulnerable to communication failures
+- **Security concerns**: Inter-agent authentication needed
+
+## Real-World Examples
+
+1. **E-commerce Order Processing**:
+   - Inventory Agent checks stock availability
+   - Pricing Agent calculates total costs
+   - Payment Agent processes transactions
+   - Shipping Agent arranges delivery
+   - Notification Agent updates customer
+   - Orchestrator coordinates entire flow
+
+2. **News Production Pipeline**:
+   - Crawler Agent gathers news sources
+   - Fact-Check Agent verifies information
+   - Writer Agent creates articles
+   - Editor Agent reviews content
+   - Publisher Agent posts to CMS
+   - Analytics Agent tracks performance
+
+3. **Financial Analysis Platform**:
+   - Data Agent collects market information
+   - Technical Agent performs chart analysis
+   - Fundamental Agent analyzes financials
+   - Risk Agent assesses portfolio exposure
+   - Report Agent generates recommendations
+   - Compliance Agent ensures regulations
+
+4. **Smart Manufacturing System**:
+   - Sensor Agents monitor equipment
+   - Quality Agents check production
+   - Maintenance Agents schedule repairs
+   - Inventory Agents manage supplies
+   - Planning Agents optimize schedules
+   - Control Agent coordinates operations
+
+5. **Healthcare Coordination**:
+   - Triage Agent assesses symptoms
+   - Diagnostic Agent suggests tests
+   - Specialist Agents provide expertise
+   - Treatment Agent recommends therapy
+   - Pharmacy Agent manages medications
+   - Scheduler Agent books appointments
+
+6. **Research Collaboration Platform**:
+   - Literature Agent searches papers
+   - Data Agent manages datasets
+   - Analysis Agent runs experiments
+   - Visualization Agent creates charts
+   - Writing Agent drafts reports
+   - Review Agent checks quality
+
+
+================================================
+FILE: pattern-discussion/knowledge-retrieval-rag.md
+================================================
+# Knowledge Retrieval (RAG) Pattern
+
+## When to Use
+
+- **Dynamic knowledge needs**: Accessing up-to-date information
+- **Large document collections**: Querying extensive knowledge bases
+- **Domain-specific applications**: Specialized knowledge integration
+- **Factual accuracy requirements**: Grounding responses in sources
+- **Citation requirements**: Providing verifiable references
+- **Reducing hallucinations**: Ensuring factual responses
+
+## Where It Fits
+
+- **Enterprise search**: Internal document retrieval systems
+- **Customer support**: Knowledge base querying
+- **Research assistants**: Academic paper retrieval
+- **Legal research**: Case law and statute searching
+- **Technical documentation**: API and product documentation access
+
+## Pros
+
+- **Accuracy**: Responses grounded in real sources
+- **Verifiability**: Citations enable fact-checking
+- **Scalability**: Handle vast document collections
+- **Currency**: Access to latest information
+- **Domain expertise**: Specialized knowledge integration
+- **Reduced hallucination**: Less fabrication of facts
+- **Flexibility**: Easy to update knowledge base
+
+## Cons
+
+- **Infrastructure needs**: Requires vector databases and storage
+- **Processing overhead**: Embedding and indexing costs
+- **Retrieval quality**: Dependent on chunking and matching
+- **Context limitations**: Retrieved chunks may lack context
+- **Latency**: Additional retrieval step adds delay
+- **Maintenance**: Knowledge base needs regular updates
+- **Relevance challenges**: May retrieve irrelevant information
+
+## Real-World Examples
+
+1. **Enterprise Knowledge Management**:
+   - Index company policies and procedures
+   - Retrieve relevant HR guidelines
+   - Search technical documentation
+   - Access historical project data
+   - Provide sourced answers to employees
+
+2. **Legal Research Platform**:
+   - Index case law and statutes
+   - Retrieve relevant precedents
+   - Search legal commentary
+   - Find similar cases
+   - Generate briefs with citations
+
+3. **Medical Information System**:
+   - Index medical literature
+   - Retrieve treatment guidelines
+   - Search drug interactions
+   - Access clinical trials data
+   - Provide evidence-based recommendations
+
+4. **Academic Research Assistant**:
+   - Index research papers
+   - Retrieve relevant studies
+   - Search across disciplines
+   - Find citation networks
+   - Generate literature reviews
+
+5. **Technical Support System**:
+   - Index product documentation
+   - Retrieve troubleshooting guides
+   - Search error code databases
+   - Access configuration examples
+   - Provide solution steps with references
+
+6. **News Aggregation Service**:
+   - Index news articles in real-time
+   - Retrieve relevant coverage
+   - Search historical archives
+   - Find related stories
+   - Generate summaries with sources
+
+
+================================================
+FILE: pattern-discussion/learning-and-adaptation.md
+================================================
+# Learning and Adaptation Pattern
+
+## When to Use
+
+- **Performance optimization**: When system needs to improve over time
+- **User personalization**: Adapting to individual user preferences
+- **Error reduction**: Learning from mistakes to prevent repetition
+- **Domain specialization**: Building expertise in specific areas
+- **Dynamic environments**: Adapting to changing conditions
+- **Feedback incorporation**: When user corrections are available
+
+## Where It Fits
+
+- **Customer service**: Learning from resolved tickets and satisfaction scores
+- **Content recommendation**: Adapting to user engagement patterns
+- **Code assistants**: Learning from code review feedback
+- **Educational systems**: Adapting to student learning patterns
+- **Decision support**: Improving predictions based on outcomes
+
+## Pros
+
+- **Continuous improvement**: System gets better with use
+- **Personalization**: Adapts to specific users or domains
+- **Error reduction**: Learns to avoid past mistakes
+- **Efficiency gains**: Optimizes common patterns over time
+- **Robustness**: Adapts to changing requirements
+- **User satisfaction**: Better alignment with expectations
+- **Knowledge retention**: Preserves learned improvements
+
+## Cons
+
+- **Feedback quality**: Dependent on reliable feedback signals
+- **Training costs**: Fine-tuning and testing require resources
+- **Regression risks**: Changes might degrade performance
+- **Complexity**: Managing learning pipelines is challenging
+- **Data requirements**: Needs sufficient feedback volume
+- **Adversarial risks**: Vulnerable to poisoning attacks
+- **Drift management**: Must handle concept drift over time
+
+## Real-World Examples
+
+1. **Customer Support Chatbot**:
+   - Learns from agent takeovers and corrections
+   - Adapts responses based on satisfaction ratings
+   - Updates FAQ answers from successful resolutions
+   - Improves intent classification from mislabeled queries
+   - Personalizes tone based on customer feedback
+
+2. **Code Review Assistant**:
+   - Learns from accepted/rejected suggestions
+   - Adapts to team coding standards
+   - Improves based on developer feedback
+   - Updates patterns from merged pull requests
+   - Learns project-specific conventions
+
+3. **Content Writing Assistant**:
+   - Learns from editor corrections
+   - Adapts to brand voice guidelines
+   - Improves SEO strategies from performance data
+   - Updates style based on engagement metrics
+   - Personalizes for different content types
+
+4. **Financial Advisory System**:
+   - Learns from investment outcomes
+   - Adapts to market conditions
+   - Improves predictions from historical data
+   - Updates risk models from losses
+   - Personalizes strategies per client profile
+
+5. **Medical Diagnosis Assistant**:
+   - Learns from confirmed diagnoses
+   - Adapts to local disease patterns
+   - Improves from physician corrections
+   - Updates protocols from new research
+   - Personalizes for patient demographics
+
+6. **E-commerce Recommendation Engine**:
+   - Learns from purchase behavior
+   - Adapts to seasonal trends
+   - Improves from return/review data
+   - Updates preferences from browsing patterns
+   - Personalizes for individual shoppers
+
+
+================================================
+FILE: pattern-discussion/memory-management.md
+================================================
+# Memory Management Pattern
+
+## When to Use
+
+- **Conversational continuity**: Maintaining context across interactions
+- **Personalization**: Remembering user preferences and history
+- **Learning systems**: Accumulating knowledge over time
+- **Complex workflows**: Tracking state across multiple steps
+- **User sessions**: Managing multi-turn conversations
+- **Knowledge accumulation**: Building domain expertise over time
+
+## Where It Fits
+
+- **Customer service bots**: Remembering previous interactions and issues
+- **Personal assistants**: Tracking user preferences and routines
+- **Educational tutors**: Remembering student progress and weaknesses
+- **Project management**: Maintaining project context and history
+- **Research assistants**: Accumulating findings across sessions
+
+## Pros
+
+- **Context preservation**: Maintains conversation continuity
+- **Personalization**: Enables tailored responses based on history
+- **Learning capability**: Improves performance through experience
+- **Efficiency**: Avoids repeating previous work
+- **User experience**: More natural, human-like interactions
+- **Knowledge building**: Accumulates valuable information over time
+- **State management**: Handles complex multi-step processes
+
+## Cons
+
+- **Storage costs**: Memory systems require database infrastructure
+- **Privacy concerns**: Storing user data raises privacy issues
+- **Context window limits**: Must manage finite token budgets
+- **Retrieval complexity**: Finding relevant memories can be challenging
+- **Data staleness**: Old memories may become outdated or irrelevant
+- **Synchronization issues**: Managing memory across distributed systems
+- **Performance overhead**: Memory operations add latency
+
+## Real-World Examples
+
+1. **Customer Support System**:
+   - Short-term: Current conversation context
+   - Episodic: Previous support tickets and resolutions
+   - Long-term: Customer preferences and history
+   - Automatic summarization of long conversations
+   - Privacy-compliant data retention policies
+
+2. **Personal Shopping Assistant**:
+   - Short-term: Current shopping session
+   - Episodic: Past purchases and returns
+   - Long-term: Style preferences and sizes
+   - Seasonal preference tracking
+   - Budget and spending pattern memory
+
+3. **Code Development Assistant**:
+   - Short-term: Current coding session
+   - Episodic: Recent bug fixes and features
+   - Long-term: Project architecture and conventions
+   - Technology stack preferences
+   - Common error patterns and solutions
+
+4. **Medical Consultation Bot**:
+   - Short-term: Current symptoms discussion
+   - Episodic: Recent appointments and treatments
+   - Long-term: Medical history and allergies
+   - Medication tracking
+   - HIPAA-compliant data handling
+
+5. **Educational Tutor**:
+   - Short-term: Current lesson context
+   - Episodic: Recent quiz results and assignments
+   - Long-term: Learning style and pace
+   - Concept mastery tracking
+   - Common mistake patterns
+
+6. **Project Management Assistant**:
+   - Short-term: Current task discussion
+   - Episodic: Recent meetings and decisions
+   - Long-term: Project goals and constraints
+   - Team member preferences
+   - Historical project patterns
+
+
+================================================
+FILE: pattern-discussion/model-context-protocol.md
+================================================
+# Model Context Protocol (MCP) Pattern
+
+## When to Use
+
+- **Enterprise systems**: Building scalable, production-grade AI applications
+- **Multi-tool integration**: Connecting to diverse external resources
+- **Standardization needs**: Ensuring consistent communication interfaces
+- **Security requirements**: Managing access control and permissions
+- **Dynamic environments**: Resources that change or evolve over time
+- **Interoperability**: Enabling different AI systems to work together
+
+## Where It Fits
+
+- **Enterprise AI platforms**: Standardizing tool and data access
+- **Multi-vendor integrations**: Connecting different AI services
+- **Microservices architectures**: AI agents accessing distributed services
+- **Cloud-native applications**: Managing resources across environments
+- **API gateways**: Centralizing AI system access to external resources
+
+## Pros
+
+- **Standardization**: Universal interface for all integrations
+- **Discoverability**: Agents can dynamically find available resources
+- **Security**: Built-in authentication and authorization
+- **Versioning**: Graceful handling of API evolution
+- **Observability**: Comprehensive logging and tracing
+- **Reusability**: Write once, use across multiple agents
+- **Scalability**: Designed for enterprise-grade deployments
+
+## Cons
+
+- **Implementation overhead**: Requires upfront protocol setup
+- **Complexity**: Additional abstraction layer to manage
+- **Learning curve**: Teams need to understand MCP concepts
+- **Migration effort**: Existing integrations need conversion
+- **Performance overhead**: Protocol layer adds latency
+- **Vendor support**: Requires ecosystem adoption
+- **Debugging complexity**: Additional layer in troubleshooting
+
+## Real-World Examples
+
+1. **Enterprise Data Platform**:
+   - Unified access to databases, APIs, and file systems
+   - Role-based access control for different teams
+   - Audit logging for compliance requirements
+   - Version management for schema evolution
+   - Discovery service for available data sources
+
+2. **Multi-Cloud AI Services**:
+   - Standardized interface to AWS, Azure, GCP services
+   - Credential management and rotation
+   - Service discovery across cloud providers
+   - Cost tracking and resource optimization
+   - Failover and redundancy handling
+
+3. **Healthcare AI System**:
+   - HIPAA-compliant data access protocols
+   - Patient data privacy controls
+   - Medical device integrations
+   - Electronic health record connections
+   - Audit trails for regulatory compliance
+
+4. **Financial Services Platform**:
+   - Market data feed integrations
+   - Trading system connections
+   - Risk management tool access
+   - Compliance checking services
+   - Transaction audit logging
+
+5. **Manufacturing IoT Integration**:
+   - Sensor data collection protocols
+   - Equipment control interfaces
+   - Quality assurance system connections
+   - Supply chain data access
+   - Predictive maintenance tools
+
+6. **Research Computing Platform**:
+   - Scientific database access
+   - Compute cluster job submission
+   - Experiment tracking systems
+   - Collaboration tool integrations
+   - Version control for research artifacts
+
+
+================================================
+FILE: pattern-discussion/multi-agent-collaboration.md
+================================================
+# Multi-Agent Collaboration Pattern
+
+## When to Use
+
+- **Complex, multi-faceted problems**: Tasks requiring diverse expertise
+- **Parallel workstreams**: When subtasks can be handled simultaneously
+- **Specialized knowledge requirements**: Different aspects need different skills
+- **Scale and efficiency**: Large projects benefiting from division of labor
+- **Quality through specialization**: When expertise depth matters
+- **Iterative refinement**: Tasks requiring multiple perspectives
+
+## Where It Fits
+
+- **Software development teams**: Design, coding, testing, documentation agents
+- **Content production pipelines**: Research, writing, editing, publishing agents
+- **Financial analysis**: Data collection, analysis, risk assessment, reporting agents
+- **Customer service**: Triage, technical, billing, escalation agents
+- **Research projects**: Literature review, experimentation, analysis, synthesis agents
+
+## Pros
+
+- **Specialization benefits**: Each agent optimized for specific tasks
+- **Parallel processing**: Multiple agents work simultaneously
+- **Scalability**: Easy to add new specialist agents
+- **Modularity**: Agents can be developed and updated independently
+- **Robustness**: Failure of one agent doesn't crash entire system
+- **Knowledge separation**: Clear boundaries between domains
+- **Quality improvement**: Multiple perspectives and validation steps
+
+## Cons
+
+- **Coordination complexity**: Managing inter-agent communication is challenging
+- **Overhead costs**: Multiple agents mean multiple API calls and resources
+- **Context management**: Maintaining shared understanding across agents
+- **Debugging difficulty**: Tracing issues across multiple agents
+- **Latency accumulation**: Handoffs between agents add delays
+- **Conflict resolution**: Agents may disagree or produce incompatible outputs
+- **State synchronization**: Keeping shared memory consistent
+
+## Real-World Examples
+
+1. **Automated News Production**:
+   - News Gatherer Agent: Collects breaking news from sources
+   - Fact Checker Agent: Verifies claims and sources
+   - Writer Agent: Drafts article with proper structure
+   - Editor Agent: Improves clarity and style
+   - SEO Agent: Optimizes for search engines
+   - Publisher Agent: Formats and publishes to CMS
+
+2. **Investment Analysis System**:
+   - Market Data Agent: Gathers real-time market information
+   - Fundamental Analysis Agent: Evaluates company financials
+   - Technical Analysis Agent: Analyzes price patterns
+   - Risk Assessment Agent: Calculates portfolio risks
+   - Report Generator Agent: Creates investment recommendations
+   - Compliance Agent: Ensures regulatory compliance
+
+3. **E-commerce Product Launch**:
+   - Market Research Agent: Analyzes competition and demand
+   - Product Description Agent: Creates compelling copy
+   - Pricing Agent: Determines optimal pricing strategy
+   - Inventory Agent: Manages stock levels
+   - Marketing Agent: Plans promotional campaigns
+   - Customer Service Agent: Prepares FAQ and support materials
+
+4. **Legal Document Review**:
+   - Document Parser Agent: Extracts key information
+   - Clause Analysis Agent: Identifies important terms
+   - Risk Identifier Agent: Flags potential issues
+   - Compliance Checker Agent: Ensures regulatory adherence
+   - Summary Generator Agent: Creates executive summaries
+   - Recommendation Agent: Suggests modifications
+
+5. **Software Bug Resolution**:
+   - Bug Triage Agent: Categorizes and prioritizes issues
+   - Code Analysis Agent: Identifies affected components
+   - Solution Designer Agent: Proposes fixes
+   - Implementation Agent: Generates patch code
+   - Testing Agent: Creates and runs test cases
+   - Documentation Agent: Updates docs and release notes
+
+6. **Academic Paper Review**:
+   - Literature Review Agent: Finds related work
+   - Methodology Critic Agent: Evaluates research methods
+   - Statistical Validator Agent: Checks calculations
+   - Writing Quality Agent: Assesses clarity and structure
+   - Citation Checker Agent: Verifies references
+   - Summary Writer Agent: Creates review summary
+
+
+================================================
+FILE: pattern-discussion/parallelization.md
+================================================
+# Parallelization Pattern
+
+## When to Use
+
+- **Large-scale data processing**: When processing multiple documents, records, or data sources
+- **Time-sensitive operations**: When results are needed quickly and tasks are independent
+- **Batch operations**: When performing the same operation on multiple items
+- **Web scraping/crawling**: When gathering data from multiple sources simultaneously
+- **Multi-document analysis**: When analyzing multiple files or documents independently
+- **API aggregation**: When calling multiple APIs that don't depend on each other
+
+## Where It Fits
+
+- **Document processing pipelines**: Analyzing multiple PDFs or reports simultaneously
+- **Data enrichment workflows**: Enhancing records from multiple data sources
+- **Content generation**: Creating multiple variations or translations in parallel
+- **Research automation**: Searching multiple databases or sources concurrently
+- **Testing frameworks**: Running multiple test scenarios simultaneously
+
+## Pros
+
+- **Speed improvement**: Dramatic reduction in total processing time
+- **Resource utilization**: Better use of available computational resources
+- **Scalability**: Easy to scale up or down based on workload
+- **Fault isolation**: Failure in one worker doesn't affect others
+- **Progress tracking**: Can show incremental progress as workers complete
+- **Flexibility**: Can dynamically adjust worker count based on load
+- **Cost efficiency**: Optimize resource usage and reduce idle time
+
+## Cons
+
+- **Complexity increase**: Managing multiple concurrent processes is challenging
+- **Resource limits**: API rate limits and quotas constrain parallelization
+- **Coordination overhead**: Synchronization and result merging add complexity
+- **Debugging difficulty**: Harder to trace issues in parallel execution
+- **Cost multiplication**: Multiple simultaneous API calls increase costs
+- **Memory usage**: Holding multiple results in memory can be resource-intensive
+- **Ordering challenges**: Maintaining sequence when needed requires extra logic
+
+## Real-World Examples
+
+1. **News Aggregation Service**:
+   - Simultaneously fetch articles from 50+ news sources
+   - Each worker processes one news source
+   - Rate limit to 10 concurrent API calls
+   - Merge and deduplicate results
+   - Sort by relevance and timestamp
+
+2. **E-commerce Price Monitoring**:
+   - Monitor prices across 100+ competitor sites
+   - Parallel workers scrape product pages
+   - Handle retry logic for failed requests
+   - Aggregate pricing data into comparison matrix
+   - Generate price change alerts
+
+3. **Document Intelligence System**:
+   - Process 1000+ page legal document set
+   - Split into 50-page chunks for parallel analysis
+   - Each worker extracts entities and clauses
+   - Merge findings into comprehensive report
+   - Track document provenance for each finding
+
+4. **Social Media Analytics**:
+   - Analyze mentions across Twitter, LinkedIn, Facebook, Instagram
+   - Parallel workers for each platform
+   - Apply sentiment analysis to each mention
+   - Aggregate into unified dashboard
+   - Generate trend reports with platform breakdown
+
+5. **Code Repository Analysis**:
+   - Scan entire codebase for security vulnerabilities
+   - Parallel workers analyze different directories
+   - Each worker runs different security checks
+   - Collect and prioritize all findings
+   - Generate comprehensive security report
+
+6. **Multi-language Translation Project**:
+   - Translate documentation into 15 languages
+   - Parallel workers for each language pair
+   - Maintain consistency with translation memory
+   - Quality check each translation
+   - Compile into multi-language documentation set
+
+
+================================================
+FILE: pattern-discussion/planning.md
+================================================
+# Planning Pattern
+
+## When to Use
+
+- **Complex multi-step projects**: When tasks have multiple dependencies and phases
+- **Goal-oriented workflows**: When working toward specific, measurable objectives
+- **Resource-constrained operations**: When managing budgets, time, or computational limits
+- **Uncertain environments**: When adaptability to changing conditions is needed
+- **Collaborative tasks**: When coordinating multiple agents or tools
+- **Long-running processes**: When tasks span extended timeframes
+
+## Where It Fits
+
+- **Project management automation**: Breaking down projects into executable tasks
+- **Software development**: Planning features from requirements to deployment
+- **Research projects**: Organizing literature review, experimentation, and analysis
+- **Content production**: Planning multi-part content series or campaigns
+- **Business process automation**: Orchestrating complex business workflows
+
+## Pros
+
+- **Strategic execution**: Transforms reactive agents into proactive planners
+- **Dependency management**: Handles complex task interdependencies
+- **Resource optimization**: Allocates resources efficiently across steps
+- **Adaptability**: Can adjust plans based on new information
+- **Progress visibility**: Clear tracking of milestone completion
+- **Risk mitigation**: Early identification of blockers and issues
+- **Reusability**: Plans can be templated and reused
+
+## Cons
+
+- **Upfront overhead**: Planning phase adds initial latency
+- **Rigidity risk**: Over-planning can reduce flexibility
+- **Complexity**: Managing plan state and dependencies is challenging
+- **Prediction errors**: Initial plans may be based on incorrect assumptions
+- **Replanning costs**: Adjusting plans mid-execution can be expensive
+- **Context limitations**: Long plans may exceed context windows
+- **Coordination overhead**: Managing multiple agents increases complexity
+
+## Real-World Examples
+
+1. **Software Feature Development**:
+   - Requirements analysis and design
+   - Development task breakdown
+   - Testing strategy planning
+   - Deployment scheduling
+   - Documentation preparation
+   - Rollback planning
+
+2. **Marketing Campaign Execution**:
+   - Market research and analysis
+   - Content creation schedule
+   - Channel selection and timing
+   - Budget allocation
+   - Performance monitoring setup
+   - A/B testing plans
+
+3. **Academic Research Project**:
+   - Literature review planning
+   - Hypothesis formulation
+   - Experiment design
+   - Data collection schedule
+   - Analysis methodology
+   - Publication timeline
+
+4. **Data Migration Project**:
+   - Data audit and mapping
+   - Schema design
+   - Migration script development
+   - Testing phases
+   - Rollout schedule
+   - Validation checkpoints
+
+5. **Product Launch Planning**:
+   - Development milestones
+   - Marketing preparation
+   - Sales enablement
+   - Support documentation
+   - Launch event coordination
+   - Post-launch monitoring
+
+6. **Compliance Audit Preparation**:
+   - Requirement identification
+   - Document gathering
+   - Gap analysis
+   - Remediation planning
+   - Review scheduling
+   - Report generation
+
+
+================================================
+FILE: pattern-discussion/prioritization.md
+================================================
+# Prioritization Pattern
+
+## When to Use
+
+- **Resource constraints**: Limited processing capacity
+- **Multiple objectives**: Competing goals and tasks
+- **Dynamic environments**: Constantly changing priorities
+- **Complex dependencies**: Tasks with interdependencies
+- **Time-sensitive operations**: Deadline-driven work
+- **Fair scheduling**: Preventing task starvation
+
+## Where It Fits
+
+- **Task management systems**: Workflow orchestration
+- **Customer service**: Ticket prioritization
+- **Manufacturing**: Production scheduling
+- **Healthcare**: Patient triage systems
+- **DevOps**: Deployment and maintenance prioritization
+
+## Pros
+
+- **Efficiency**: Optimal use of resources
+- **Responsiveness**: High-priority items handled first
+- **Fairness**: Prevents indefinite delays
+- **Adaptability**: Adjusts to changing conditions
+- **Transparency**: Clear prioritization logic
+- **Goal alignment**: Tasks ranked by business value
+- **Scalability**: Handles growing task queues
+
+## Cons
+
+- **Complexity**: Priority calculation can be complex
+- **Overhead**: Continuous reordering costs resources
+- **Starvation risk**: Low-priority tasks may wait forever
+- **Context switching**: Preemption adds overhead
+- **Subjective scoring**: Priority factors may be disputed
+- **Dependencies**: Complex dependency management
+- **Prediction errors**: Effort estimates may be wrong
+
+## Real-World Examples
+
+1. **Customer Support System**:
+   - Premium customers get priority
+   - Urgent issues ranked higher
+   - Age-based escalation
+   - Skill-based routing
+   - SLA compliance tracking
+   - Load balancing across agents
+
+2. **Software Development Pipeline**:
+   - Critical bugs prioritized
+   - Feature value scoring
+   - Technical debt scheduling
+   - Dependency resolution
+   - Sprint capacity planning
+   - Resource allocation
+
+3. **Healthcare Triage**:
+   - Emergency severity scoring
+   - Wait time consideration
+   - Resource availability
+   - Specialist routing
+   - Test result prioritization
+   - Appointment scheduling
+
+4. **Manufacturing Scheduler**:
+   - Order value prioritization
+   - Deadline management
+   - Resource optimization
+   - Setup time minimization
+   - Quality requirements
+   - Maintenance windows
+
+5. **Content Publishing**:
+   - Trending topic priority
+   - Editorial calendar
+   - Author availability
+   - SEO value scoring
+   - Social media timing
+   - Cross-platform coordination
+
+6. **Network Traffic Management**:
+   - QoS packet prioritization
+   - Bandwidth allocation
+   - Latency-sensitive routing
+   - Fair queuing
+   - Emergency traffic priority
+   - Load balancing
+
+
+================================================
+FILE: pattern-discussion/prompt-chaining.md
+================================================
+[Binary file]
+
+
+================================================
+FILE: pattern-discussion/reasoning-techniques.md
+================================================
+# Reasoning Techniques Pattern
+
+## When to Use
+
+- **Complex problem-solving**: Multi-step logical challenges
+- **Mathematical reasoning**: Problems requiring systematic thinking
+- **Strategic planning**: Evaluating multiple approaches
+- **Critical analysis**: Deep examination of options
+- **Decision making**: Weighing alternatives systematically
+- **Creative exploration**: Generating diverse solutions
+
+## Where It Fits
+
+- **Research analysis**: Breaking down complex research questions
+- **Code debugging**: Systematic problem identification
+- **Business strategy**: Evaluating strategic options
+- **Medical diagnosis**: Differential diagnosis reasoning
+- **Legal analysis**: Building logical arguments
+
+## Pros
+
+- **Improved accuracy**: Systematic thinking reduces errors
+- **Transparency**: Clear reasoning traces
+- **Exploration**: Considers multiple solution paths
+- **Robustness**: Multiple methods provide validation
+- **Learning**: Reasoning traces help improvement
+- **Flexibility**: Different techniques for different problems
+- **Quality**: Higher quality solutions through deliberation
+
+## Cons
+
+- **Increased latency**: Multiple reasoning steps take time
+- **Token consumption**: Verbose reasoning uses more tokens
+- **Complexity**: Managing reasoning flows is challenging
+- **Overthinking**: Can make simple problems complex
+- **Context limits**: Long reasoning may exceed windows
+- **Cost multiplication**: Multiple paths increase costs
+- **Diminishing returns**: Extra reasoning may not help
+
+## Real-World Examples
+
+1. **Mathematical Problem Solver**:
+   - Chain-of-Thought for step-by-step solutions
+   - Self-consistency checking multiple approaches
+   - Tree-of-Thoughts exploring solution branches
+   - Validation through different methods
+   - Clear explanation generation
+
+2. **Strategic Business Advisor**:
+   - Tree-of-Thoughts for strategy exploration
+   - Debate between growth vs efficiency
+   - Self-consistency across market analyses
+   - ReAct pattern with data retrieval
+   - Synthesis of best strategies
+
+3. **Code Architecture Designer**:
+   - Chain-of-Thought for design decisions
+   - Tree exploration of architectures
+   - Debate between design patterns
+   - ReAct with code analysis tools
+   - Reasoning persistence for documentation
+
+4. **Medical Diagnostic System**:
+   - Differential diagnosis reasoning tree
+   - Self-consistency across symptoms
+   - Chain-of-Thought for treatment plans
+   - Debate between treatment options
+   - Evidence-based reasoning traces
+
+5. **Legal Case Analyzer**:
+   - Chain-of-Thought for legal arguments
+   - Tree exploration of precedents
+   - Debate between interpretations
+   - Self-consistency across statutes
+   - Structured legal reasoning
+
+6. **Investment Analysis Platform**:
+   - Tree-of-Thoughts for scenario analysis
+   - Self-consistency across valuations
+   - Debate bull vs bear cases
+   - Chain reasoning for DCF models
+   - ReAct with market data retrieval
+
+
+================================================
+FILE: pattern-discussion/reflection.md
+================================================
+# Reflection Pattern
+
+## When to Use
+
+- **Quality-critical outputs**: When high accuracy and quality are non-negotiable
+- **Complex reasoning tasks**: When problems require iterative refinement
+- **Creative work**: When content needs multiple rounds of improvement
+- **Learning systems**: When you want to improve performance over time
+- **Error-prone domains**: When initial attempts often have mistakes
+- **Compliance requirements**: When outputs must meet specific standards
+
+## Where It Fits
+
+- **Content creation**: Blog posts, reports, and documentation requiring polish
+- **Code generation**: Producing bug-free, optimized code
+- **Legal document drafting**: Ensuring accuracy and completeness
+- **Academic writing**: Research papers needing fact-checking and citations
+- **Product descriptions**: E-commerce content requiring SEO and accuracy
+
+## Pros
+
+- **Quality improvement**: Systematic enhancement through multiple iterations
+- **Error reduction**: Catches and fixes mistakes before final delivery
+- **Objectivity**: Separation of generation and critique roles
+- **Learning capability**: System improves over time from patterns
+- **Transparency**: Clear feedback trail for improvements
+- **Flexibility**: Can adjust critique criteria for different use cases
+- **Consistency**: Applies same quality standards uniformly
+
+## Cons
+
+- **Increased latency**: Multiple iterations multiply processing time
+- **Higher costs**: Each reflection cycle incurs additional API calls
+- **Context window limits**: Long documents may exceed token limits
+- **Diminishing returns**: Later iterations may provide minimal improvement
+- **Over-optimization**: Risk of making content generic or losing voice
+- **Complexity**: Requires careful tuning of critique criteria
+- **API throttling**: Multiple rapid calls may hit rate limits
+
+## Real-World Examples
+
+1. **Technical Blog Post Creation**:
+   - Initial draft generation
+   - Technical accuracy review
+   - Code example validation
+   - SEO optimization check
+   - Readability improvements
+   - Final grammar and style polish
+
+2. **Contract Generation System**:
+   - Draft initial contract terms
+   - Legal compliance review
+   - Risk assessment critique
+   - Clarity and ambiguity check
+   - Client-specific customization
+   - Final legal review
+
+3. **Educational Content Development**:
+   - Create lesson content
+   - Pedagogical effectiveness review
+   - Factual accuracy verification
+   - Age-appropriateness check
+   - Engagement factor assessment
+   - Accessibility improvements
+
+4. **Software Documentation**:
+   - Generate API documentation
+   - Technical accuracy review
+   - Code example testing
+   - Completeness check
+   - Clarity improvements
+   - Version consistency validation
+
+5. **Marketing Copy Refinement**:
+   - Initial copy generation
+   - Brand voice alignment check
+   - Persuasiveness assessment
+   - Fact and claim verification
+   - SEO keyword optimization
+   - A/B test variant creation
+
+6. **Research Report Writing**:
+   - Draft research findings
+   - Methodology critique
+   - Statistical validation
+   - Citation verification
+   - Logical flow improvement
+   - Executive summary refinement
+
+
+================================================
+FILE: pattern-discussion/resource-aware-optimization.md
+================================================
+# Resource-Aware Optimization Pattern
+
+## When to Use
+
+- **Cost-sensitive operations**: When managing API or compute costs
+- **High-volume processing**: Optimizing large-scale operations
+- **Variable workloads**: Different tasks need different resources
+- **Budget constraints**: Operating within financial limits
+- **Performance requirements**: Balancing speed vs cost
+- **Multi-tenant systems**: Fair resource allocation across users
+
+## Where It Fits
+
+- **SaaS platforms**: Managing per-customer resource usage
+- **Batch processing**: Optimizing large data processing jobs
+- **Real-time systems**: Balancing latency and cost
+- **Development environments**: Using cheaper models for testing
+- **Production systems**: Optimizing operational costs
+
+## Pros
+
+- **Cost reduction**: Significant savings on API and compute costs
+- **Performance optimization**: Right-sized resources for each task
+- **Scalability**: Efficient resource use enables growth
+- **Flexibility**: Dynamic adjustment to workload changes
+- **Budget control**: Predictable operational costs
+- **Quality preservation**: Maintains output quality where needed
+- **Automatic optimization**: Self-tuning based on patterns
+
+## Cons
+
+- **Complexity increase**: Resource management adds overhead
+- **Quality variations**: Different models produce different results
+- **Routing overhead**: Classification step adds latency
+- **Monitoring requirements**: Need comprehensive tracking
+- **Tuning challenges**: Finding optimal thresholds takes time
+- **Cache management**: Maintaining cache coherency
+- **User experience**: Inconsistent response times
+
+## Real-World Examples
+
+1. **Customer Support Platform**:
+   - Simple FAQs use lightweight models
+   - Complex issues use advanced models
+   - Cache common question responses
+   - Prioritize premium customers
+   - Track cost per ticket resolution
+
+2. **Content Generation Service**:
+   - Short social posts use fast models
+   - Long articles use quality models
+   - Reuse templates for common requests
+   - Batch similar requests together
+   - Monitor cost per content piece
+
+3. **Code Assistant Tool**:
+   - Syntax fixes use simple models
+   - Architecture design uses advanced models
+   - Cache common code patterns
+   - Prioritize based on project importance
+   - Track cost per developer action
+
+4. **Translation Platform**:
+   - Common languages use basic models
+   - Rare languages use specialized models
+   - Cache frequent translations
+   - Batch document processing
+   - Optimize cost per word translated
+
+5. **Data Analysis System**:
+   - Simple aggregations use basic compute
+   - Complex ML uses premium resources
+   - Cache intermediate results
+   - Schedule heavy jobs off-peak
+   - Monitor cost per analysis
+
+6. **Educational Platform**:
+   - Basic Q&A uses lightweight models
+   - Complex tutoring uses advanced models
+   - Cache common explanations
+   - Allocate resources by subscription tier
+   - Track cost per student interaction
+
+
+================================================
+FILE: pattern-discussion/routing.md
+================================================
+# Routing Pattern
+
+## When to Use
+
+- **Multi-domain systems**: When handling diverse request types requiring different expertise
+- **Dynamic workflow selection**: When the appropriate process depends on input characteristics
+- **Resource optimization**: When different requests require different computational resources
+- **Specialized tool access**: When specific tools or APIs are needed based on request type
+- **Confidence-based processing**: When you need to handle ambiguous requests differently
+- **Load balancing**: When distributing work across multiple specialized agents
+
+## Where It Fits
+
+- **Customer service platforms**: Routing inquiries to appropriate department agents
+- **Multi-modal AI systems**: Directing requests to text, image, or code processing pipelines
+- **Enterprise automation**: Routing tasks to appropriate business process workflows
+- **Content moderation**: Directing content to appropriate review pipelines
+- **Healthcare triage**: Routing patient queries to appropriate medical specialists
+
+## Pros
+
+- **Specialization**: Each route can be optimized for specific task types
+- **Scalability**: Easy to add new routes without affecting existing ones
+- **Efficiency**: Requests are handled by the most appropriate resources
+- **Flexibility**: Dynamic routing based on context and confidence
+- **Clarity**: Clear separation of concerns between different workflows
+- **Performance**: Avoid unnecessary processing for simple requests
+- **Maintainability**: Each route can be updated independently
+
+## Cons
+
+- **Router complexity**: The routing logic itself can become a bottleneck
+- **Misrouting risks**: Incorrect routing decisions can lead to poor outcomes
+- **Latency overhead**: Additional step for routing decision adds delay
+- **Training requirements**: Router needs continuous improvement based on feedback
+- **Edge cases**: Ambiguous requests may not fit cleanly into categories
+- **Coordination overhead**: Managing multiple specialized agents increases complexity
+- **Monitoring complexity**: Need to track performance across multiple paths
+
+## Real-World Examples
+
+1. **AI Customer Service Hub**:
+   - Technical issues → Technical Support Agent with access to documentation
+   - Billing questions → Finance Agent with access to payment systems
+   - Product inquiries → Sales Agent with catalog access
+   - Complaints → Escalation Agent with CRM integration
+   - General questions → FAQ Agent with knowledge base
+
+2. **Content Creation Platform**:
+   - Blog posts → Long-form Writing Agent
+   - Social media → Short-form Content Agent
+   - Technical documentation → Technical Writing Agent
+   - Marketing copy → Copywriting Agent
+   - Translations → Localization Agent
+
+3. **Code Assistant Router**:
+   - Bug fixes → Debugging Agent with error analysis tools
+   - New features → Development Agent with design patterns
+   - Refactoring → Code Quality Agent with best practices
+   - Testing → Test Generation Agent with coverage tools
+   - Documentation → Documentation Agent with template library
+
+4. **Financial Services Router**:
+   - Trading requests → Trading Agent with market data
+   - Risk assessment → Risk Analysis Agent with models
+   - Compliance checks → Compliance Agent with regulations
+   - Reporting → Report Generation Agent with templates
+   - Fraud detection → Security Agent with pattern detection
+
+5. **Educational Platform Router**:
+   - Math problems → Mathematical Reasoning Agent
+   - Language learning → Language Tutor Agent
+   - Science questions → Science Expert Agent
+   - History queries → Historical Research Agent
+   - Study planning → Learning Strategy Agent
+
+
+================================================
+FILE: pattern-discussion/tool-use.md
+================================================
+# Tool Use (Function Calling) Pattern
+
+## When to Use
+
+- **External data access**: When agents need real-time or dynamic information
+- **System integration**: When connecting to databases, APIs, or services
+- **Computational tasks**: When precise calculations or data processing is needed
+- **File operations**: When reading, writing, or manipulating files
+- **Action execution**: When agents need to perform concrete actions
+- **Multi-step workflows**: When combining AI reasoning with tool execution
+
+## Where It Fits
+
+- **Research assistants**: Web search, document retrieval, fact-checking
+- **Data analysis workflows**: Database queries, calculations, visualizations
+- **DevOps automation**: System commands, deployment tools, monitoring
+- **Customer service**: CRM access, ticket management, knowledge base queries
+- **Content management**: File operations, publishing tools, asset management
+
+## Pros
+
+- **Capability extension**: Agents can perform actions beyond text generation
+- **Real-time data**: Access to current information not in training data
+- **Precision**: Exact calculations and deterministic operations
+- **Integration**: Seamless connection to existing systems and services
+- **Automation**: Complete end-to-end workflows without human intervention
+- **Flexibility**: Dynamic tool selection based on task requirements
+- **Auditability**: Clear log of all tool usage and parameters
+
+## Cons
+
+- **Security risks**: Tool access must be carefully controlled
+- **Error propagation**: Tool failures can break entire workflows
+- **Latency addition**: Each tool call adds processing time
+- **Cost accumulation**: External API calls may incur charges
+- **Complexity**: Managing tool schemas and error handling
+- **Dependency risks**: Reliance on external services availability
+- **Data sensitivity**: Need careful handling of credentials and private data
+
+## Real-World Examples
+
+1. **Financial Analysis Assistant**:
+   - Stock price API for real-time quotes
+   - Calculator for portfolio calculations
+   - Database queries for historical data
+   - Chart generation tools for visualizations
+   - Email API for report distribution
+
+2. **Code Development Helper**:
+   - File system access for reading/writing code
+   - Compiler/interpreter for code execution
+   - Git commands for version control
+   - Testing frameworks for validation
+   - Documentation generators
+
+3. **E-commerce Order Management**:
+   - Inventory database queries
+   - Payment processing APIs
+   - Shipping service integrations
+   - Email/SMS notification tools
+   - CRM system updates
+
+4. **Research Paper Assistant**:
+   - Academic database searches (PubMed, arXiv)
+   - Citation management tools
+   - PDF parsing and extraction
+   - Reference formatting tools
+   - Plagiarism checking APIs
+
+5. **Smart Home Controller**:
+   - IoT device APIs (lights, thermostats)
+   - Weather service integration
+   - Calendar access for scheduling
+   - Energy monitoring tools
+   - Security system controls
+
+6. **HR Recruitment System**:
+   - Resume parsing tools
+   - LinkedIn/job board APIs
+   - Calendar scheduling tools
+   - Email automation
+   - Background check services
+   - Video interview platforms
+
