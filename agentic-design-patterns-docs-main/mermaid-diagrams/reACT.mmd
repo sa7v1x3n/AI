@@ -1,0 +1,21 @@
+flowchart TD
+
+    A[User asks question]
+
+    A --> B[LLM Thinks]
+
+    B --> C{Need external info?}
+
+    C -->|Yes| D[Call Tool]
+
+    D --> E[Get Observation]
+
+    E --> F[Update Memory / Context]
+
+    F --> B
+
+    C -->|No| G[Generate Final Answer]
+
+    style B fill:#f9f,stroke:#333
+    style D fill:#bbf,stroke:#333
+    style G fill:#bfb,stroke:#333

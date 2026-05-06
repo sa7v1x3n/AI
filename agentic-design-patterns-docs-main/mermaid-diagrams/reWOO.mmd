@@ -1,0 +1,23 @@
+flowchart TD
+
+    A[User Query]
+
+    A --> B[Planner LLM]
+
+    B --> C[Create Entire Plan]
+
+    C --> D[Execute Tool Step 1]
+    C --> E[Execute Tool Step 2]
+    C --> F[Execute Tool Step 3]
+
+    D --> G[Collect Results]
+    E --> G
+    F --> G
+
+    G --> H[Solver LLM]
+
+    H --> I[Final Answer]
+
+    style B fill:#f9f,stroke:#333
+    style G fill:#bbf,stroke:#333
+    style I fill:#bfb,stroke:#333
